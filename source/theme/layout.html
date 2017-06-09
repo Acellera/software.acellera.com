@@ -13,6 +13,7 @@
     ('/about.html', 'about', 'About'),
     ('http://workshop.htmd.org', 'workshop', 'Workshop'),
     ('https://github.com/Acellera/htmd', 'github', 'Help'),
+    ('https://github.com/Acellera/htmd', 'github', '<img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" height="30" width="30">'),
 ] -%}
 {% set active_page = active_page|default('documentation') -%}
 
@@ -93,12 +94,13 @@
 
  <div class='main-header'>
 	<div class='main-header-wrapper'>
-		<a class='project-name' href="/"> {{ project }}</a>
+		<a class='project-name' href="/"> <img src="../../static_files/img/acellera-logo.png"> </a> <!--this is the MAIN NAME-->
 		<div id="cssmenu">
 		<ul id="menu">
             {% for href, id, caption in navigation_bar %}
-                <li{% if id == active_page %} class="active" {% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+                <li{% if id == active_page %} class="active" {% endif %}><a href="{{ href|e }}">{{ caption }}</a></li>
             {% endfor %}
+			<li>{% include "searchbox.html" %}</li> <!--does not work with li-->
 		</ul>
 		</div>
 	
@@ -137,7 +139,7 @@
 			</li>
 		</ul>
 		</div>
-        {% include "searchbox.html" %}
+
 	<div style='clear:both'></div>
       </div>
 
@@ -147,7 +149,7 @@
           {% set toctree = toctree(maxdepth=3, collapse=False, includehidden=True) %}
           {% if toctree %}
               {{ toctree }}
-	<ul class='searchbox-vertical'><li>{% include "searchbox.html" %}</li></ul>
+	<!--<ul class='searchbox-vertical'><li>{% include "searchbox.html" %}</li></ul>-->
     {% include "versionbox.html" %}
           {% else %}
               <!-- Local TOC -->
@@ -193,7 +195,8 @@
             VERSION:'{{ release|e }}',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'{{ '' if no_search_suffix else file_suffix }}',
-            HAS_SOURCE:  {{ has_source|lower }}
+            HAS_SOURCE:  {{ has_source|lower }},
+            SOURCELINK_SUFFIX: '{{ sourcelink_suffix }}'
         };
     </script>
     {%- for scriptfile in script_files %}

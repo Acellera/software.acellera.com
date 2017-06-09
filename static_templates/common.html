@@ -4,9 +4,10 @@
     ('/about.html', 'about', 'About Us'),
     ('http://workshop.htmd.org', 'workshop', 'Workshop'),
     ('https://github.com/Acellera/htmd', 'github', 'Help'),
+    ('https://github.com/Acellera/htmd', 'github', '<img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" height="30" width="30">'),
 ] -%}
 {% set active_page = active_page|default('documentation') -%}
-
+<!--This set navigation bar appears here and in layouthtml. probably different pages are genereated from the one or the other.-->
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
@@ -33,7 +34,7 @@
 		<div id="logowrapper">
 	 		<div id="logo">
 			    <div class='innerwrapper'>
-				<a href='/'><div id="logologo">HTMD</div></a>
+				<a href='/'><div id="logologo">Acellera</div></a>
 			        <nav></nav>
 				<!--<div class='search_input'>
 			    &nbsp;
@@ -55,7 +56,7 @@
 				<div id='cssmenu'>
 					<ul id='menu'>
                         {% for href, id, caption in navigation_bar %}
-                            <li{% if id == active_page %} class="active" {% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+                            <li{% if id == active_page %} class="active" {% endif %}><a href="{{ href|e }}">{{ caption }}</a></li>
                         {% endfor %}
 					</ul>
 				</div>
