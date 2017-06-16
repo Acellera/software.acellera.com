@@ -14,6 +14,7 @@
     ('http://workshop.htmd.org', 'workshop', 'Workshop'),
     ('https://github.com/Acellera/htmd', 'github', 'Help'),
     ('https://github.com/Acellera/htmd', 'github', '<img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" height="30" width="30">'),
+	('https://www.youtube.com/user/acelleralive', 'youtube','Youtube'),
 ] -%}
 {% set active_page = active_page|default('documentation') -%}
 
@@ -94,7 +95,7 @@
 
  <div class='main-header'>
 	<div class='main-header-wrapper'>
-		<a class='project-name' href="/"> <img src="/home/alejandro/acelleraweb/software.acellera.com/static_files/img/acellera_new_web.png"> </a> <!--this is the MAIN NAME-->
+		<a class='project-name' href="/"> <img src="/home/alejandro/acelleraweb/software.acellera.com/static_files/img/acellera_new_web.png"> </a> <!--this is the MAIN NAME try this url('/img/gianni_bw.png')-->
 		<div id="cssmenu">
 		<ul id="menu">
             {% for href, id, caption in navigation_bar %}
@@ -108,11 +109,6 @@
  </div>
 
   <div class="wy-grid-for-nav">
-
-   
-   
-	
-
 
     {# SIDE NAV, TOGGLES ON MOBILE #}
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
@@ -134,15 +130,20 @@
 			<li class="menu-workshop">
 				<a href="http://workshop.htmd.org">Workshop</a>
 			</li>
-			<li class="menu-workshop last">
+			<li class="menu-workshop">
 				<a href="https://github.com/Acellera/htmd">Help</a>
 			</li>
 			<li class="menu-workshop">
 				<a href="https://github.com/Acellera/htmd">GitHub</a>
 			</li>
+			<li class="menu-workshop  last">
+				<a href="https://www.youtube.com/user/acelleralive">Youtube</a>
+			</li>			
+			
 			<li>
 				{% include "searchbox.html" %}
 			</li>	
+			
 			
 		</ul>
 		</div>

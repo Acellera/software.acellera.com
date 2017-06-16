@@ -15,7 +15,7 @@
         <meta content="width=device-width, initial-scale=1, maximum-scale=2" name="viewport"></meta>
         <meta name="description" content="HTMD is a programmable environment to prepare, handle, simulate and analyze molecular systems.">
         <link href="/img/ben.png" rel="shortcut icon">
-        <script src="./javascripts/scrollbar/jquery.min.js"></script> 
+        <script src="./javascripts/scrollbar/jquery.min.js"></script>
         <link href="./stylesheets/documentation.css" rel="stylesheet"></link>
         <link href="./stylesheets/scrollToTop.css" rel="stylesheet"></link>
         <link href="./stylesheets/tables.css" rel="stylesheet"></link>
@@ -30,51 +30,114 @@
 	    <link href="./stylesheets/jquery.bxslider.css" rel="stylesheet"></link>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	</head>
-	<body>
-		<div id="logowrapper">
-	 		<div id="logo">
-			    <div class='innerwrapper'>
-				<a href='/'><div id="logologo">Acellera</div></a>
-			        <nav></nav>
-				<!--<div class='search_input'>
-			    &nbsp;
-						<script>
-							  (function() {
-							    var cx = '010196959304576088743:yuxue-akf2k';
-							    var gcse = document.createElement('script');
-							    gcse.type = 'text/javascript';
-							    gcse.async = true;
-							    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-							        '//cse.google.com/cse.js?cx=' + cx;
-							    var s = document.getElementsByTagName('script')[0];
-							    s.parentNode.insertBefore(gcse, s);
-							  })();
-							</script>
-							<gcse:search></gcse:search>
 
-				</div>-->
-				<div id='cssmenu'>
-					<ul id='menu'>
-                        {% for href, id, caption in navigation_bar %}
-                            <li{% if id == active_page %} class="active" {% endif %}><a href="{{ href|e }}">{{ caption }}</a></li>
-                        {% endfor %}
-					</ul>
-				</div>
-			    </div>
-	 		</div>
-	        	<div style='clear:both'></div>
+
+<body class="wy-body-for-nav" role="document">
+
+ <div class='main-header'>
+	<div class='main-header-wrapper'>
+		<a class='project-name' href="/"> <img src="/home/alejandro/acelleraweb/software.acellera.com/static_files/img/acellera_new_web.png"> </a> <!--this is the MAIN NAME try this url('/img/gianni_bw.png')-->
+		<div id="cssmenu">
+		<ul id="menu">
+            {% for href, id, caption in navigation_bar %}
+                <li{% if id == active_page %} class="active" {% endif %}><a href="{{ href|e }}">{{ caption }}</a></li>
+            {% endfor %}
+			<li> {#% include "source/theme/searchbox.html" %#}</li>
+		</ul>
 		</div>
-        {% block body_content %}
-        {% endblock %}
-		
-		<footer>
-         	All rights reserved {{ year }} &copy;
-         
-         
-         	<div class="acellera-logo">Supported by <img src="./img/acellera-logo.png"></div>    		
-		</footer>
+	
+    	</div>
+ </div>
 
-		<a href="#" class="scrollup"></a>
+  <div class="wy-grid-for-nav">
+
+    {# SIDE NAV, TOGGLES ON MOBILE #}
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        {% block sidebartitle %}
+          <a href="./index.html" class="project-name"> Acellera </a> <!--image here of logo--> 
+        {% endblock %}
+	<div id="cssmenu">
+		<ul id="menu">
+			<li class="menu-documentation active">
+				<a href="/docs/latest/index.html">Documentation</a>
+			</li>
+			<li class="menu-download">
+				<a href="/download.html">Download</a>
+			</li>
+			<li class="menu-about">
+				<a href="/about.html">About</a>
+			</li>
+			<li class="menu-workshop">
+				<a href="http://workshop.htmd.org">Workshop</a>
+			</li>
+			<li class="menu-workshop">
+				<a href="https://github.com/Acellera/htmd">Help</a>
+			</li>
+			<li class="menu-workshop">
+				<a href="https://github.com/Acellera/htmd">GitHub</a>
+			</li>
+			<li class="menu-workshop  last">
+				<a href="https://www.youtube.com/user/acelleralive">Youtube</a>
+			</li>			
+			
+			<li>
+				{#% include "searchbox.html" %#}
+			</li>	
+			
+			
+		</ul>
+		</div>
+
+	<div style='clear:both'></div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class='menu-content-title'><li>Contents</li></ul>
+        {% block menu %}
+        {% endblock %}
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      {# MOBILE NAV, TRIGGLES SIDE NAV ON TOGGLE #}
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Acellera</a> <!--image logo here?-->
+      </nav>
+
+
+      {# PAGE CONTENT #}
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          {#% include "breadcrumbs.html" %#}
+          <div role="main" class="document">
+			<div style="padding-top:10px; padding-bottom:30px;"  id="allbody">
+				<a href='academic-download.html' class='button'>Free HTMD standard (non-profit only)</a>
+				<a href='https://www.acellera.com/contact/' class='button'>HTMD Pro</a>
+				<a href='https://github.com/Acellera/htmd/' class='button'>Source code for code lovers</a>
+			</div>
+          </div>
+			<footer>
+				All rights reserved {{ year }} &copy;
+			 
+			 
+				<div class="acellera-logo">Supported by <img src="./img/acellera-logo.png"></div>    		
+			</footer>
+
+			<a href="#" class="scrollup"></a>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+	<a class="scrollup" href="#" style="display: inline;"></a>
+
+
 		<script>
 			// Mobile menu
 		    $(document).ready(function(){
