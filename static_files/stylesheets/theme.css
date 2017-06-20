@@ -241,7 +241,7 @@ big, small {
     font-size: 100%}
 @media print {
     html, body, section {
-    background: none !important; //again background defined
+    background: none !important; /*(again background defined)*/
 }
 * {
     box-shadow: none !important;
@@ -1562,6 +1562,37 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 button[disabled] {
     cursor: default;
 }
+
+a.button {
+    border: 1px solid #16a086;
+    border-radius: 800px;
+    color: #16a086;
+    display: block;
+    font-family: "Open Sans",sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    margin: 40px auto 80px;
+    padding: 10px 20px;
+    text-align: center;
+    transition: all 200ms ease-in 0s;
+    width: 60%;
+	margin:auto auto;
+	margin-bottom: 20px;
+	max-width:400px;	
+margin-top:20px;
+}
+
+a.button:hover{
+        background-color: #16A086;
+        color:white !important;
+        box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.6);
+}
+a.button:visited{
+        color: #16A086;
+}
+
+
 .btn {
     display: inline-block;
     border-radius: 2px;
@@ -1638,6 +1669,7 @@ button[disabled] {
     padding: 0;
     border: 0;
 }
+
 .btn-small {
     font-size: 80%}
 .btn-info {
@@ -2380,7 +2412,7 @@ body {
     color: #404040;
     min-height: 100%;
     overflow-x: hidden;
-    background: #e6e6e6; //again background defined
+    background: #e6e6e6; /*(again background defined)*/
 }
 .wy-text-left {
     text-align: left;
@@ -2889,7 +2921,7 @@ div[class^='highlight'] pre {
 	border-bottom: 1px solid #66a1fa;*/
 }
 .wy-menu-vertical li.current a {
-    color: rgba(0,0,0,0.8); //link color , color of subitems in docs toctree;
+    color: rgba(0,0,0,0.8); /*(link color , color of subitems in docs toctree;)*/
     /*border-bottom: solid 1px #c9c9c9;*/
     padding: 0.4045em 2.427em;
     background-color: white;
@@ -2921,14 +2953,14 @@ div[class^='highlight'] pre {
 
 .wy-menu-vertical li.toctree-l3.current > a {
     padding-left: 45px;
-    color: rgba(0,0,0,0.7); //link color
+    color: rgba(0,0,0,0.7); /*(link color)*/
     background-color: #f5f5f5; 
 
 }
 
 .wy-menu-vertical li.toctree-l3 > a {
     padding-left: 45px;
-    color: rgba(0,0,0,0.5); //link color
+    color: rgba(0,0,0,0.5); /*(link color)*/
     background-color:#f5f5f5;
 }
 
@@ -2944,7 +2976,7 @@ div[class^='highlight'] pre {
 }
 .wy-menu-vertical li ul li a {
     margin-bottom: 0;
-    color: #b3b3b3; //link color tried
+    color: #b3b3b3; /*(link color tried)*/
     font-weight: normal;
 }
 .wy-menu-vertical a {
@@ -2955,14 +2987,14 @@ div[class^='highlight'] pre {
     position: relative;
     font-size: 90%;
     /*color: #b3b3b3;*/
-    color: white; // LINK COLOR MAIN TOCTREE ITEMS
+    color: white; /*( LINK COLOR MAIN TOCTREE ITEMS)*/
 }
 .wy-menu-vertical a:hover {
     /*background-color: #4e4a4a;*/
     cursor: pointer;
 }
 .wy-menu-vertical a:active {
-    background-color: white; //clicking link candidate hover color here
+    background-color: white; /*(clicking link candidate hover color here)*/
     cursor: pointer;
     color: #fff;
 }
@@ -3007,11 +3039,11 @@ div[class^='highlight'] pre {
     color: #66a1fa;
 }
 .wy-nav .wy-menu-vertical a {
-    color: #b3b3b3; //link color tried
+    color: #b3b3b3; /*(link color tried)*/
 }
 .wy-nav .wy-menu-vertical a:hover {
     background-color: #66a1fa;
-    color: #fff; //link color tried2
+    color: #fff; /*(link color tried2)*/
 }
 [data-menu-wrap] {
     -webkit-transition: all 0.2s ease-in;
@@ -3075,7 +3107,7 @@ div[class^='highlight'] pre {
     clear: both;
 }
 .wy-nav-top a {
-    color:#fff; //link color tried2
+    color:#fff; /*(link color tried2)*/
     font-weight: bold;
 }
 .wy-nav-top img {
@@ -3676,14 +3708,14 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 .menu-content-title li{
 	padding: 0.4045em 1.618em;
 	color:white;
-	background:#0e59d1; //content color
+	background:#0e59d1; /*(content color)*/
 }
 
 .wy-nav-side{
 	-webkit-transition: all 0.5s ease-in;
     	-moz-transition: all 0.5s ease-in;
     	transition: all 0.5s ease-in;
-	background-color: #216be0;// menu color
+	background-color: #216be0;/*( menu color)*/
 
 }
 
@@ -3745,11 +3777,11 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
 
 #cssmenu ul li.active a {
-    color: white; //link color
+    color: white; /*(link color)*/
     font-weight:700;
 }
 #cssmenu ul li a {
-    color: #ffffff; //link color
+    color: #ffffff; /*(link color)*/
     display: block;
     font-family: "Open Sans",sans-serif;
     font-size: 14px;
@@ -3832,7 +3864,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     margin: auto;
    
     position: relative;
-    width: 90%; //set witdh of main content
+    width: 90%; /*(set witdh of main content)*/
 }
 
 .wy-menu-vertical{
@@ -3869,16 +3901,16 @@ nav.stickynav {
 
 .wy-menu-vertical a {
     background-color: #216be0; 
-    color:rgba(0, 0, 0, 0.8); //link color tried2
+    color:rgba(0, 0, 0, 0.8); /*(link color tried2)*/
 }
 
 .wy-menu-vertical li.on a, .wy-menu-vertical li.current > a {
     background: white;
-    color:#146acf; //link color tried
+    color:#146acf; /*(link color tried)*/
 }
 
 .wy-menu-vertical > ul.current > li.current > a {
-    color: #146acf; //link color tried
+    color: #146acf; /*(link color tried)*/
 }
 
 .menu-content-title{

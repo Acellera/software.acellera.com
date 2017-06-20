@@ -24,7 +24,7 @@
 -->
 	<link href="./stylesheets/scrollToTop.css" rel="stylesheet"></link><!-- this is fine -->
 	<link href="./stylesheets/tables.css" rel="stylesheet"></link><!-- this is fine -->
-	<link href="./stylesheets/navigation_bar.css" rel="stylesheet"></link> <!-- this is fine -->
+	<!--<link href="./stylesheets/navigation_bar.css" rel="stylesheet"></link>--> <!-- this messes up with the style of the menu, putting everything in bold -->
 	<script src="./javascripts/scrollToTop.js"></script>
 	<link rel="stylesheet" href="./stylesheets/slicknav.min.css"></link> 
 	<script src="./javascripts/jquery.slicknav.min.js"></script>
@@ -128,7 +128,9 @@
 	<ul class='menu-content-title'><li>Contents</li></ul>
 		<ul>
 			<li class="toctree-l1"><a class="reference internal" href="./download.html">HTMD</a></li>
+<!--
 			<li class="toctree-l1"><a class="reference internal" href="./download_aceflow.html">AceFlow</a></li>
+-->
 			<li class="toctree-l1"><a class="reference internal" href="./download_acemd.html">AceMD</a></li>
 		</ul>
 
@@ -186,15 +188,14 @@
             
   <div class="section" id="acellera-software-documentation">
 
-{% block content %}
+
 <h1>Acellera Software Download<a class="headerlink" href="#acellera-software-documentation" title="Permalink to this headline"></a></h1>
 </div>
+{% block content %}
 <div class="section" id="where-to-start">
-	<ul>
-		<li><a href='academic-download.html' class='btn btn-primary btn-md'>Free HTMD standard (non-profit only)</a></li>
-		<li><a href='https://www.acellera.com/contact/' class='btn btn-primary btn-md'>HTMD Pro</a></li>
-		<li><a href='https://github.com/Acellera/htmd/' class='btn btn-primary btn-md'>Source code for code lovers</a></li>
-	</ul>
+		<a class="button" href='academic-download.html'>Free HTMD standard (non-profit only)</a>
+		<a class="button" href='https://www.acellera.com/contact/' class='btn btn-primary btn-md'>HTMD Pro</a>
+		<a class="button" href='https://github.com/Acellera/htmd/' class='btn btn-primary btn-md'>Source code for code lovers</a>
 </div>
 {% endblock content %}  
     </div>
