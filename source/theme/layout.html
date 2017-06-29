@@ -10,11 +10,10 @@
 {% set navigation_bar = [
     ('/docs/latest/index.html', 'documentation', 'Documentation'),
     ('/download.html', 'download', 'Download'),
-    ('/about.html', 'about', 'About'),
     ('http://workshop.htmd.org', 'workshop', 'Workshop'),
-    ('https://github.com/Acellera/htmd', 'github', 'Help'),
+    ('https://github.com/Acellera/htmd/issues', 'github', 'Help'),
     ('https://github.com/Acellera/htmd', 'github', '<img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" height="30" width="30">'),
-	('https://www.youtube.com/user/acelleralive', 'youtube','Youtube'),
+	('https://www.youtube.com/user/acelleralive', 'youtube','<img src="https://cdn.pixabay.com/photo/2014/05/14/14/17/youtube-344106_960_720.png" height="50" width="70">'),
 ] -%}
 {% set active_page = active_page|default('documentation') -%}
 
@@ -95,7 +94,7 @@
 
  <div class='main-header'>
 	<div class='main-header-wrapper'>
-		<a class='project-name' href="/"> <img src="/home/alejandro/acelleraweb/software.acellera.com/static_files/img/acellera_new_web.png"> </a> <!--this is the MAIN NAME try this url('/img/gianni_bw.png')-->
+		<a class='project-name' href="/"> <img src="https://www.acellera.com/r/wp-content/uploads/2012/10/acellera_new_web.png" height="63" width="250"> </a> <!--"/home/alejandro/acelleraweb/software.acellera.com/static_files/img/acellera_new_web.png"-->
 		<div id="cssmenu">
 		<ul id="menu">
             {% for href, id, caption in navigation_bar %}
@@ -114,7 +113,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
         {% block sidebartitle %}
-          <a href="{{ pathto(master_doc) }}" class="project-name"> Acellera </a> <!--image here of logo--> 
+          <a href="{{ pathto(master_doc) }}" class="project-name"> acellera </a> <!--image here of logo--> 
         {% endblock %}
 	<div id="cssmenu">
 		<ul id="menu">
@@ -124,20 +123,17 @@
 			<li class="menu-download">
 				<a href="/download.html">Download</a>
 			</li>
-			<li class="menu-about">
-				<a href="/about.html">About</a>
-			</li>
 			<li class="menu-workshop">
 				<a href="http://workshop.htmd.org">Workshop</a>
 			</li>
 			<li class="menu-workshop">
-				<a href="https://github.com/Acellera/htmd">Help</a>
+				<a href="https://github.com/Acellera/htmd/issues">Help</a>
 			</li>
 			<li class="menu-workshop">
 				<a href="https://github.com/Acellera/htmd">GitHub</a>
 			</li>
 			<li class="menu-workshop  last">
-				<a href="https://www.youtube.com/user/acelleralive">Youtube</a>
+				<a href="https://www.youtube.com/user/acelleralive">Video Tutorials</a>
 			</li>			
 			
 			<li>
@@ -173,7 +169,7 @@
       {# MOBILE NAV, TRIGGLES SIDE NAV ON TOGGLE #}
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="{{ pathto(master_doc) }}">Acellera</a> <!--image logo here?-->
+        <a href="{{ pathto(master_doc) }}">acellera</a> <!--image logo here?-->
       </nav>
 
 

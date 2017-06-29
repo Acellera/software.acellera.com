@@ -15,7 +15,7 @@ You can find here a list of all available software:
     :maxdepth: 3
 
     HTMD <htmd/index>
-    AceMD <acemd/index>
+    ACEMD <acemd/index>
     AceCloud <acecloud/index>
     Parameterize <parameterize/index>
     AceFlow <aceflow/index>

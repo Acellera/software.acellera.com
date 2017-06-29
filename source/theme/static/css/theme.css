@@ -3743,11 +3743,11 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     width: 100%;
 }
 
-
 #cssmenu ul li.active a {
-    color: white; //link color
+    color: black; /*(link color)*/
     font-weight:700;
 }
+
 #cssmenu ul li a {
     color: #ffffff; //link color
     display: block;
@@ -3774,7 +3774,6 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 	width:50%;
 	float:left;
 	line-height:30px;
-
 }
 
 .wy-side-nav-search #cssmenu {
@@ -3800,6 +3799,10 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
 }
 
+#cssmenu a{
+    color:black !important;
+}
+
 .wy-menu-vertical{
 	overflow-y:auto;
 }
@@ -3810,8 +3813,9 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
 .main-header{
 	display:block;
-	background-color: #66a1ff; /*suspect*/
-	border-bottom: 2px solid white;
+	background-color: #e6f7ff; /*suspect*/
+	border-bottom: 2px solid green;
+	height:90px;
 	
 }
 .main-header-wrapper{

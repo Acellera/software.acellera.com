@@ -13,7 +13,6 @@
 }
 
 
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -3598,7 +3597,9 @@ span[id*='MathJax-Span'] {
 
 .main-header{
 	height:90px;
-	display:none;
+	display:block;
+	background-color: #e6f7ff; 
+	border-bottom: 2px solid green;
 
 }
 .wy-nav-side.stick-to-top{
@@ -3777,7 +3778,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
 
 #cssmenu ul li.active a {
-    color: white; /*(link color)*/
+    color: black; /*(link color)*/
     font-weight:700;
 }
 #cssmenu ul li a {
@@ -3792,6 +3793,11 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     text-transform: uppercase;
     transition: color 0.25s ease 0s;
 }
+
+#cssmenu a{
+    color:black !important;
+}
+
 .acellera-logo {
     float: right;
     line-height: 30px;
@@ -3842,8 +3848,8 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
 .main-header{
 	display:block;
-	background-color: #66a1ff; /*suspect*/
-	border-bottom: 2px solid white;
+	background-color: #e6f7ff; /*suspect modifies main menu backgorund*/
+	border-bottom: 2px solid green; /*modifies the border*/
 	
 }
 .main-header-wrapper{

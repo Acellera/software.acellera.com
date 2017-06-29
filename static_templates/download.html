@@ -6,6 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Acellera Software Documentation &mdash; HTMD X.Y documentation</title>
     <link rel="shortcut icon" href="/img/ben.png"/>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -43,7 +44,7 @@
 
  <div class='main-header'>
 	<div class='main-header-wrapper'>
-		<a class='project-name' href="/"> <img src="/home/alejandro/acelleraweb/software.acellera.com/static_files/img/acellera_new_web.png"> </a> <!--this is the MAIN NAME try this url('/img/gianni_bw.png')-->
+		<a class='project-name' href="/"> <img src="https://www.acellera.com/r/wp-content/uploads/2012/10/acellera_new_web.png" height="63" width="250"> </a>
 		<div id="cssmenu">
 		<ul id="menu">
             
@@ -51,19 +52,21 @@
             
                 <li class="active"><a href="/download.html">Download</a></li>
             
+<!--
                 <li><a href="/about.html">About</a></li>
+-->
             
                 <li><a href="http://workshop.htmd.org">Workshop</a></li>
             
-                <li><a href="https://github.com/Acellera/htmd">Help</a></li>
+                <li><a href="https://github.com/Acellera/htmd/issues">Help</a></li>
             
                 <li><a href="https://github.com/Acellera/htmd"><img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" height="30" width="30"></a></li>
             
-                <li><a href="https://www.youtube.com/user/acelleralive">Youtube</a></li>
+                <li><a href="https://www.youtube.com/user/acelleralive"><img src="https://cdn.pixabay.com/photo/2014/05/14/14/17/youtube-344106_960_720.png" height="50" width="70"></a></li>
             
 			<li>
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+  <form id="rtd-search-form" class="wy-form" action="../html/search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" /> 
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -80,7 +83,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
         
-          <a href="#" class="project-name"> Acellera </a> <!--image here of logo--> 
+          <a href="#" class="project-name"> acellera </a> <!--image here of logo--> 
         
 	<div id="cssmenu">
 		<ul id="menu">
@@ -90,9 +93,11 @@
 			<li class="menu-download active">
 				<a href="/download.html">Download</a>
 			</li>
+<!--
 			<li class="menu-about">
 				<a href="/about.html">About</a>
 			</li>
+-->
 			<li class="menu-workshop">
 				<a href="http://workshop.htmd.org">Workshop</a>
 			</li>
@@ -102,14 +107,14 @@
 			<li class="menu-workshop">
 				<a href="https://github.com/Acellera/htmd">GitHub</a>
 			</li>
-			<li class="menu-workshop  last">
-				<a href="https://www.youtube.com/user/acelleralive">Youtube</a>
+			<li class="menu-workshop last">
+				<a href="https://www.youtube.com/user/acelleralive">Video tutorials</a>
 			</li>			
 			
 			<li>
 				
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+  <form id="rtd-search-form" class="wy-form" action="../html/search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" /> 
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -131,7 +136,7 @@
 <!--
 			<li class="toctree-l1"><a class="reference internal" href="./download_aceflow.html">AceFlow</a></li>
 -->
-			<li class="toctree-l1"><a class="reference internal" href="./download_acemd.html">AceMD</a></li>
+			<li class="toctree-l1"><a class="reference internal" href="./download_acemd.html">ACEMD</a></li>
 		</ul>
 
 	<!--<ul class='searchbox-vertical'><li>
@@ -161,7 +166,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="#">Acellera</a> <!--image logo here?-->
+        <a href="#">acellera</a> <!--image logo here?-->
       </nav>
 
 
@@ -193,7 +198,7 @@
 </div>
 {% block content %}
 <div class="section" id="where-to-start">
-		<a class="button" href='academic-download.html'>Free HTMD standard (non-profit only)</a>
+		<a class="button" href='academic-download.html'>Free HTMD</a>
 		<a class="button" href='https://www.acellera.com/contact/' class='btn btn-primary btn-md'>HTMD Pro</a>
 		<a class="button" href='https://github.com/Acellera/htmd/' class='btn btn-primary btn-md'>Source code for code lovers</a>
 </div>
@@ -267,15 +272,7 @@
   
   <script type="text/javascript" src="_static/js/custom.js"></script>
 
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-  
-    <script type="text/javascript">
+      <script type="text/javascript">
         $(document).ready(function(){ 
             if (window.location.href.indexOf("/latest/") > -1) {
                 //alert("you are on latest");
@@ -291,7 +288,7 @@
 				.mouseenter(function() {
 					//$('input[name=q]:first').css('width','300%')
 					$( 'input[name=q]:first').animate({
-						width: "300%",
+						width: "250%",
 					}, 200 );
 			    })
 				.mouseleave(function() {
@@ -304,6 +301,14 @@
 
         }) 
     </script>
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+
 
    <script src="/javascripts/scrollToTop.js"></script> 
 
