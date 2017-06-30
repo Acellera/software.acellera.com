@@ -10,9 +10,9 @@ BUILDDIR      = build
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
-ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
+ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS)
 
-.PHONY: help clean static publish publish-test html
+.PHONY: help clean static publish publish-test html rst
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -21,9 +21,12 @@ help:
 
 clean:
 	rm -rf $(BUILDDIR)/
+	rm -rf latest/source/htmd/*
+	rm -rf latest/source/parameterize/*
 
 publish:
-	scp -r $(BUILDDIR)/html/* www.acellera.com:~/software.acellera.com/docs/
+	scp -r $(BUILDDIR)/latest/html/* www.acellera.com:~/software.acellera.com/docs/latest
+	#scp -r $(BUILDDIR)/stable/html/* www.acellera.com:~/software.acellera.com/docs/stable
 	scp -r $(BUILDDIR)/static/*  www.acellera.com:~/software.acellera.com/
 	ssh www.acellera.com 'chmod -R g+rwX software.acellera.com/'
 
@@ -37,8 +40,15 @@ static:
 	python render_jinja.py ./static_templates/ $(BUILDDIR)/static/
 	cp -R ./static_files/* $(BUILDDIR)/static/
 
-html: static
-#Get each software source
-	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+rst:
+	scp -r www.acellera.com:~/software.acellera.com/source/htmd/latest/* latest/source/htmd
+	#scp -r www.acellera.com:~/software.acellera.com/source/htmd/stable/* stable/source/htmd
+	#For others
+	scp -r www.acellera.com:~/software.acellera.com/source/parameterize/* latest/source/parameterize
+	#scp -r www.acellera.com:~/software.acellera.com/source/parameterize/* stable/source/parameterize
+
+html: static rst
+	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) latest/source $(BUILDDIR)/latest/html
+	#$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) stable/source $(BUILDDIR)/stable/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html"
