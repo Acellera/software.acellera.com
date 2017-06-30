@@ -1,9 +1,5 @@
 ﻿/*scroll to top*/
 
-a {
-    color: black;
-}
-
 .scrollup {
 	width: 40px;
 	height: 40px;
@@ -372,11 +368,6 @@ font-style: normal;
 .pull-left {
     float: left;
 }
-
-.rst-content a {
-    color:blue;
-}
-
 .fa.pull-left, .rst-content .pull-left.admonition-title, .rst-content h1 .pull-left.headerlink, .rst-content h2 .pull-left.headerlink, .rst-content h3 .pull-left.headerlink, .rst-content h4 .pull-left.headerlink, .rst-content h5 .pull-left.headerlink, .rst-content h6 .pull-left.headerlink, .rst-content dl dt .pull-left.headerlink, .pull-left.icon {
     margin-right: .3em;
 }
