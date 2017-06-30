@@ -6,115 +6,136 @@
     <div style="width:90%; margin: auto auto;">
 
         <h1 style="font-size:2.25em;margin-right:0px;margin-bottom:16px;margin-left:0px;line-height:1.2;padding-bottom:0.3em;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(238,238,238);color:rgb(51,51,51);font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;margin-top:20px!important">
+            Prerequisites</h1>
+
+        <p class="style1">
+			Hardware: ACEMD requires a modern NVIDIA GPU: we recommend the Geforce 980, 1080 or Tesla K and P-series GPUs. The latest NVIDIA Driver should be installed, available from here
+		</p>
+		
+        <p class="style1">
+		Software: ACEMD requires a 64bit Linux OS. ACEMD is formally qualified with Red Hat EL6, but will work with any Linux distribution supported by NVIDIA CUDA, provided the GLIBC version is 2.12 or higher. Note that RHEL 5 and SLES 10 are not supported. For replica exchange support, please ensure that the OS’s openmpi packages are installed.
+		</p>
+
+        <h1 style="font-size:2.25em;margin-right:0px;margin-bottom:16px;margin-left:0px;line-height:1.2;padding-bottom:0.3em;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(238,238,238);color:rgb(51,51,51);font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;margin-top:20px!important">
             Getting ACEMD</h1>
+            
+        <p class="style1">    
+        ACEMD is now distributed as part of Acellera’s High Throughput Molecular Dynamics Toolkit. To install this, please follow the DOWNLOAD instructions HERE.
+		</p>
+		
+		<p class="style1">
+		Existing customers: We recommend that you change to the above method too.
+		</p>
+
+        <h1 style="font-size:2.25em;margin-right:0px;margin-bottom:16px;margin-left:0px;line-height:1.2;padding-bottom:0.3em;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(238,238,238);color:rgb(51,51,51);font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;margin-top:20px!important">
+            Install ACEMD Basic</h1>
+        <p class="style1"> 
+        Even if you have not purchased an ACEMD Pro license, ACEMD can be used in Basic mode, in which it is restricted to running on the first GPU of your computer.
+		</p>
+		
+		<p class="style1"> 
+		Basic mode first requires registration and acceptance of our EULA. to do this, please run the command htmd_register and enter your details.
+		</p>
+		
+		<p class="style1"> 
+		ACEMD may then be run from the command line with the command acemd, or via HTMD    
+		</p>
+		
+
+		
+        <h1 style="font-size:2.25em;margin-right:0px;margin-bottom:16px;margin-left:0px;line-height:1.2;padding-bottom:0.3em;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(238,238,238);color:rgb(51,51,51);font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;margin-top:20px!important">
+            Install ACEMD Pro</h1>
+        <p class="style1"> 
+        If you have purchases an ACEMD Pro node-locked license from Acellera you will be issued with an activation token. After following the installation instructions above, issue the command:
+		</p>
+		
+		<div class="highlighter-rouge"><pre class="highlight"><code> $ activate_license [activation-token]</code></pre>
+		
+		<p class="style1"> 		
+		This will download and install your license key. If any error is reported please contact Acellera.</p>
+		<p class="style1"> 
+		ACEMD may then be run from the command line with the command acemd, or via HTMD</p>
+		<p class="style1"> 
+		Customers purchasing group/floating license will receive additional installation download details for Acellera’s license server along with their order confirmation. The installation guide for the license server is below.</p>
+		<p class="style1"> 
+		If you have obtained ACEMD Pro as part of a Metrocubo solution, you will receive the machine with ACEMD installed, configured and ready to run.</p>
+		
+		<h1 style="font-size:2.25em;margin-right:0px;margin-bottom:16px;margin-left:0px;line-height:1.2;padding-bottom:0.3em;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(238,238,238);color:rgb(51,51,51);font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;margin-top:20px!important">
+            Nvidia driver update procedure</h1>	
+		
+		<p class="style1">It is generally not recommended updating the driver unless there is a necessary bug fix in a later version.
+		That, said, here is what you should do assuming the OS is CentOS:</p>
+
+		<ul>
+		  <li>As root, “yum update”. Reboot if the kernel is updated.</li>
+		  <li>Download the new driver from <a href="http://www.nvidia.com/Download/index.aspx">here</a></li>
+		  <li><code class="highlighter-rouge">chmod +x NVIDIA-Linux-x86_64-XXX.XX.run</code></li>
+		  <li>As root, <code class="highlighter-rouge">telinit 3</code> to drop the text mode</li>
+		  <li>Run NVIDIA installer, answering yes to all questions</li>
+		  <li><code class="highlighter-rouge">reboot</code></li>
+		</ul>
+
+		<h1 style="font-size:2.25em;margin-right:0px;margin-bottom:16px;margin-left:0px;line-height:1.2;padding-bottom:0.3em;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(238,238,238);color:rgb(51,51,51);font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;margin-top:20px!important" id="extra-features">Extra features</h1>
+
+		<h2 id="more-on-replica-exchange-and-mpi">More on Replica Exchange and MPI</h2>
+
+		<p class="style1">ACEMD supports ensemble simulations for replica exchange molecular dynamics. This is implemented using MPI for parallel communication. Because there are many different MPI implementations, all with different binary interfaces, ACEMD includes a wrapper library to allow it be used with whichever MPI your system is configured with.</p>
+
+		<p class="style1">If you do not intend to use ensemble methods, and receive no warnings or errors when running ACEMD, you do not need to take any further action.</p>
+
+		<p class="style1">The wrapper library, libmpiwrapper.so, provided with ACEMD is built against OpenMPI and compatible with Red Hat / Centos 6+  OS packages. If you wish to use a different MPI, you must recompile the wrapper as follows:</p>
+		<div class="highlighter-rouge"><pre class="highlight"><code>    $ cd [HTMD installation home]/mpiwrapper
+			$ make
+		</code></pre>
+		</div>
+		<p class="style1">If you receive any errors, check that the MPI development packages and C compiler are installed. If successful, the libmpiwrapper.so in the lib directory will be reconfigured for your system.</p>
+
+		<h2 id="license-server">License Server</h2>
+
+		<p class="style1">Floating licenses allow ACEMD to be used on any machine, subject to a limit on the number of concurrent instances. Floating licenses require a license server to be running. This should be installed on a machine that all clients can connect to over the network. In a cluster environment, for example, it should be run on an administrative machine.</p>
+
+		<p class="style1">The following instructions assume that you have administrative/root access to the machine in question, that the Operating System is Red Hat EL6, and that you wish to configure the license server to run automatically as a system service.</p>
+
+		<p class="style1">first download the license server <a href="https://download.acellera.com/acemd-release-2016/acellera-license-server.tgz">here</a>.</p>
+
+		<p class="style1">To install the license server, first create a new userid for it, for example:</p>
+		<div class="highlighter-rouge"><pre class="highlight"><code>    # useradd sglmd
+		</code></pre>
+		</div>
+		<p class="style1">Next, copy the script <code class="highlighter-rouge">$ACEMD_HOME/sglmd/etc/lmgrd.sglmd</code> to <code class="highlighter-rouge">/etc/init.d</code>. Edit the copy to include the correct value for <code class="highlighter-rouge">ACEMD_HOME</code> for your system. We recommend using <code class="highlighter-rouge">/opt/acellera</code></p>
+
+		<p class="style1">Add the license server as a system process and enable it at runlevel 3 and 5:</p>
+		<div class="highlighter-rouge"><pre class="highlight"><code>    # chkconfig --add lmgrd.sglmd
+			# chkconfig --level 35 lmgrd.sglmd on
+		</code></pre>
+		</div>
+		<p class="style1">Install the license file as <code class="highlighter-rouge">license.dat</code> in <code class="highlighter-rouge">ACEMD_HOME</code>. Ensure that its permissions allow it to be read under the sglmd user context.</p>
+
+		<p class="style1">Start the license server using:</p>
+		<div class="highlighter-rouge"><pre class="highlight"><code>    # service lmgrd.sglmd start
+		</code></pre>
+		</div>
+
+		<p class="style1">The license server will produce a log file in /var/log/lmgrd.sglmd. Check this file to confirm that all is working:</p>
+
+		<div class="highlighter-rouge"><pre class="highlight"><code>    $ head -2 /var/log/lmgrd.sglmd
+			2013/01/01 00:00:00 Server starting on host.example.com, port 27000, max components 64, max connections 256
+			Enabling acemd 1.0 60 28-apr-2014 
+			Ready...
+		</code></pre>
+		</div>
+
+		<p class="style1">Check that the license components available matchthose purchased (in this example 60 acemd tokens with expiry date 28 April 2014).</p>
+
+		<p class="style1">Finally, ensure that the environment variable <code class="highlighter-rouge">SG_LICENSE_FILE</code> is set with the connection details of the license server. This has the format port@hostname. The default port number is 27000. For example:</p>
+
+		<div class="highlighter-rouge"><pre class="highlight"><code>    $ export SG_LICENSE_FILE=27000@host.example.com
+		</code></pre>
+		</div>
+
+		<p class="style1">If you encounter any problems installing the license server, please contact us directly at support@acellera.com</p>
 
 
-        <h2 class="style4">
-            Getting the package installer</h2>
-
-        <p class="style1">
-            First, check if you already have conda:</p>
-        <div class="style2">
-            <pre class="style3">  conda -V </pre>
-        </div>
-        <p class="style1">
-            If this command reports the conda version, follow to the <a href="#installing-htmd">Installing ACEMD</a>
-            section. If not, download the appropriate following package:</p>
-        <table style="border:1px solid rgb(211,211,211);border-spacing: 0; width:80%; margin: auto auto;">
-            <tr>
-                <td style="padding-top:10px;padding-bottom:10px;width:33%;background-color: #f9f9f9;text-align: center;">
-                    <span style='opacity:0.6' class="fa fa-apple fa-4x"></span>
-                    <p style="color:rgb(102,102,102)">Mac OS X<br><small>(Some features are not supported)</small></p></td>
-                <td style="border-left: 1px solid rgb(211,211,211); padding-top:10px;padding-bottom:10px;width:33%;background-color: #f9f9f9;text-align: center;">
-                    <span style='opacity:0.6' class="fa fa-linux fa-4x"></span>
-                    <p style="color:rgb(102,102,102)">Linux</p></td>
-                <td style="border-left: 1px solid rgb(211,211,211); padding-top:10px;padding-bottom:10px;width:33%;background-color: #f9f9f9;text-align: center;">
-                    <span style='opacity:0.6' class="fa fa-windows fa-4x"></span>
-                    <p style="color:rgb(102,102,102)">Windows<br><small>(Some features are not supported)</small></p></td>
-            </tr>
-            <tr>
-                <td style="border-top:1px solid rgb(211,211,211);text-align:center;padding-top:10px; padding-bottom:10px;">
-                    <p><a style='color:#29488C' class="reference external"
-                          href="https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh">64-bit (bash
-                        installer)</a></p>
-
-                </td>
-                <td style="text-align:center;border-left:1px solid rgb(211,211,211);padding-top:10px; padding-bottom:10px;border-top:1px solid rgb(211,211,211);">
-                    <p><a style='color:#29488C' class="reference external"
-                          href="https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh">64-bit (bash
-                        installer)</a></p>
-                </td>
-                <td style="text-align:center;border-left:1px solid rgb(211,211,211);padding-top:10px; padding-bottom:10px;border-top:1px solid rgb(211,211,211);">
-                    <p><a style='color:#29488C' class="reference external"
-                          href="https://repo.continuum.io/miniconda/Miniconda3-latest-Windows-x86_64.exe">64-bit (exe
-                        installer)</a></p>
-                </td>
-            </tr>
-        </table>
-
-        <p class="style2">
-            Now, to install the conda package manager, go to directory where to you downloaded the previous package and
-            run: </p>
-        <div class="style2">
-            <pre class="style3">  bash Miniconda3-latest-*-x86_64.sh</pre>
-        </div>
-        <p class="style1">
-            And follow the instructions.</p>
-
-        <h2 class="style4">
-            <div id="installing-htmd"></div>
-            Installing ACEMD
-        </h2>
-        <p class="style1">
-            With conda installed, you can now easily <span class="il">install</span> ACEMD by running the following
-            commands:</p>
-        <div class="style2"><pre class="style3"> conda config --add channels acellera
- conda <span class="il">install</span> htmd</pre>
-        </div>
-
-        <h2 class="style4">
-            <div id="start-using-htmd"></div>
-            Register HTMD
-        </h2>
-        <p class="style1">
-            Before using HTMD, please read the EULA and register using the command</p>
-        <div class="style2">
-            <pre class="style3">  htmd_register</pre>
-        </div>
-
-        <p class="style1">
-            If you don't accept the EULA and register at this point, HTMD will prompt for registration when the Python
-            module is imported </pre>
-
-        <h2 class="style4">
-            <div id="start-using-htmd"></div>
-            Start using ACEMD
-        </h2>
-        <p class="style1">
-            Start using ACEMD by either starting an interactive Python shell:</p>
-        <div class="style2">
-            <pre class="style3">  ipython</pre>
-        </div>
-        <p class="style1">
-            Or by opening an ipython notebook:</p>
-        <div class="style2">
-            <pre class="style3">  jupyter-notebook</pre>
-        </div>
-        <p class="style1">
-            On either case, import the module and start using HTMD:</p>
-        <div class="style2">
-            <pre class="style3">  from htmd import *</pre>
-        </div>
-
-        <h2 class="style4">
-            <div id="updating-htmd"></div>
-            Updating ACEMD
-        </h2>
-        <p class="style1">
-            If you want to update ACEMD to the latest version, run:</p>
-        <div class="style2">
-            <pre class="style3">  conda update -c acellera htmd</pre>
-        </div>
     </div>
 </div>
 {% endblock %}
