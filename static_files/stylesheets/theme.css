@@ -310,12 +310,12 @@ h2, h3 {
 
 @font-face {
 font-family: 'EvolutionTrueTypeFont';
-src: url('../fonts/evolutiontruetypefont-webfont.eot');
-src: url('../fonts/evolutiontruetypefont-webfont.eot?#iefix') format('embedded-opentype'),
-url('../fonts/evolutiontruetypefont-webfont.woff2') format('woff2'),
-url('../fonts/evolutiontruetypefont-webfont.woff') format('woff'),
-url('../fonts/evolutiontruetypefont-webfont.ttf') format('truetype'),
-url('../fonts/evolutiontruetypefont-webfont.svg#evolutionevolution') format('svg');
+src: url('fonts/evolutiontruetypefont-webfont.eot');
+src: url('fonts/evolutiontruetypefont-webfont.eot?#iefix') format('embedded-opentype'),
+url('fonts/evolutiontruetypefont-webfont.woff2') format('woff2'),
+url('fonts/evolutiontruetypefont-webfont.woff') format('woff'),
+url('fonts/evolutiontruetypefont-webfont.ttf') format('truetype'),
+url('fonts/evolutiontruetypefont-webfont.svg#evolutionevolution') format('svg');
 font-weight: normal;
 font-style: normal;
 } 
