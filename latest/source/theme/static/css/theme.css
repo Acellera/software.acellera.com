@@ -3461,8 +3461,13 @@ img {
 .rst-content tt .xref, a .rst-content tt {
     font-weight: bold;
 }
+/*
 .rst-content a tt {
     color: #e6f7ff;
+}
+*/
+.rst-content a {
+    color:blue;
 }
 .rst-content dl {
     margin-bottom: 24px;
