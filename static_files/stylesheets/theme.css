@@ -1493,7 +1493,7 @@ a .fa, a .rst-content .admonition-title, .rst-content a .admonition-title, a .rs
     background: #e1e4e5;
 }
 .wy-alert.wy-alert-neutral a, .rst-content .wy-alert-neutral.note a, .rst-content .wy-alert-neutral.attention a, .rst-content .wy-alert-neutral.caution a, .rst-content .wy-alert-neutral.danger a, .rst-content .wy-alert-neutral.error a, .rst-content .wy-alert-neutral.hint a, .rst-content .wy-alert-neutral.important a, .rst-content .wy-alert-neutral.tip a, .rst-content .wy-alert-neutral.warning a, .rst-content .wy-alert-neutral.seealso a, .rst-content .wy-alert-neutral.admonition-todo a {
-    color: #66a1fa;
+    color: #e6f7ff;
 }
 .wy-alert p:last-child, .rst-content .note p:last-child, .rst-content .attention p:last-child, .rst-content .caution p:last-child, .rst-content .danger p:last-child, .rst-content .error p:last-child, .rst-content .hint p:last-child, .rst-content .important p:last-child, .rst-content .tip p:last-child, .rst-content .warning p:last-child, .rst-content .seealso p:last-child, .rst-content .admonition-todo p:last-child {
     margin-bottom: 0;
@@ -1525,7 +1525,7 @@ a .fa, a .rst-content .admonition-title, .rst-content a .admonition-title, a .rs
     background: #27AE60;
 }
 .wy-tray-container li.wy-tray-item-info {
-    background: #66a1fa;
+    background: #e6f7ff;
 }
 .wy-tray-container li.wy-tray-item-warning {
     background: #E67E22;
@@ -1672,7 +1672,7 @@ a.button:visited{
 .btn-small {
     font-size: 80%}
 .btn-info {
-    background-color: #66a1fa !important;
+    background-color: #e6f7ff !important;
 }
 .btn-info:hover {
     background-color: #2e8ece !important;
@@ -1714,7 +1714,7 @@ a.button:visited{
 }
 .btn-link {
     background-color: transparent !important;
-    color: #66a1fa;
+    color: #e6f7ff;
     box-shadow: none;
     border-color: transparent !important;
 }
@@ -1774,7 +1774,7 @@ a.button:visited{
     cursor: pointer;
 }
 .wy-dropdown-menu>dd>a:hover {
-    background: #66a1fa;
+    background: #e6f7ff;
     color: #fff;
 }
 .wy-dropdown-menu>dd.divider {
@@ -1811,7 +1811,7 @@ a.button:visited{
     padding: 6px 12px;
 }
 .wy-dropdown.wy-dropdown-bubble .wy-dropdown-menu a:hover {
-    background: #66a1fa;
+    background: #e6f7ff;
     color: #fff;
 }
 .wy-dropdown.wy-dropdown-left .wy-dropdown-menu {
@@ -2195,7 +2195,7 @@ input[type="radio"][disabled], input[type="checkbox"][disabled] {
     color: #E67E22;
 }
 .wy-inline-validate.wy-inline-validate-info .wy-input-context {
-    color: #66a1fa;
+    color: #e6f7ff;
 }
 .rotate-90 {
     -webkit-transform: rotate(90deg);
@@ -2391,7 +2391,7 @@ input[type="radio"][disabled], input[type="checkbox"][disabled] {
     white-space: nowrap;
 }
 a {
-    color: #66a1fa;
+    color: #e6f7ff;
     text-decoration: none;
     cursor: pointer;
 }
@@ -2438,7 +2438,7 @@ a.wy-text-warning:hover {
     color: #eb9950 !important;
 }
 .wy-text-info {
-    color: #66a1fa !important;
+    color: #e6f7ff !important;
 }
 a.wy-text-info:hover {
     color: #409ad5 !important;
@@ -2891,7 +2891,7 @@ div[class^='highlight'] pre {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 80%;
-    color: #66a1fa;
+    color: #e6f7ff;
     white-space: nowrap;
 }
 .wy-menu-vertical ul {
@@ -2911,13 +2911,13 @@ div[class^='highlight'] pre {
 .wy-menu-vertical{
 
 	/*background-color:rgba(0,0,0,0.1);*/
-	background-color:#216be0; /*#216be0background color , different from ul inside wy-menu-vertical*/
+	background-color:#2eb8b8; /*#2eb8b8background color , different from ul inside wy-menu-vertical*/
 
 }
 
 .toctree-l1.current{
-	/*border-top: 1px solid #66a1fa;
-	border-bottom: 1px solid #66a1fa;*/
+	/*border-top: 1px solid #e6f7ff;
+	border-bottom: 1px solid #e6f7ff;*/
 }
 .wy-menu-vertical li.current a {
     color: rgba(0,0,0,0.8); /*(link color , color of subitems in docs toctree;)*/
@@ -2936,7 +2936,7 @@ div[class^='highlight'] pre {
     padding: 0.4045em 1.618em;
     font-weight: bold;
     position: relative;
-    /*background: #66a1fa;*/ /*wrong color*/
+    /*background: #e6f7ff;*/ /*wrong color*/
     border: none;
     
     /*border-top: solid 1px #c9c9c9;*/
@@ -2999,7 +2999,7 @@ div[class^='highlight'] pre {
 }
 .wy-side-nav-search {
     z-index: 200;
-    background-color: #66a1fa; /*wrong color*/
+    background-color: #e6f7ff; /*wrong color*/
     text-align: center;
     padding: 0.809em;
     display: block;
@@ -3021,7 +3021,7 @@ div[class^='highlight'] pre {
     margin: auto auto 0.809em auto;
     height: 45px;
     width: 45px;
-    background-color: #66a1fa;
+    background-color: #e6f7ff;
     padding: 5px;
     border-radius: 100%}
 .wy-side-nav-search>a, .wy-side-nav-search .wy-dropdown>a {
@@ -3035,13 +3035,13 @@ div[class^='highlight'] pre {
     opacity:0.6;
 }
 .wy-nav .wy-menu-vertical header {
-    color: #66a1fa;
+    color: #e6f7ff;
 }
 .wy-nav .wy-menu-vertical a {
     color: #b3b3b3; /*(link color tried)*/
 }
 .wy-nav .wy-menu-vertical a:hover {
-    background-color: #66a1fa;
+    background-color: #e6f7ff;
     color: #fff; /*(link color tried2)*/
 }
 [data-menu-wrap] {
@@ -3091,7 +3091,7 @@ div[class^='highlight'] pre {
 }
 .wy-nav-top {
     display: none;
-    background: #66a1fa; /*wrong color*/
+    background: #e6f7ff; /*wrong color*/
     color: #fff;
     padding: 0.4045em 0.809em;
     position: relative;
@@ -3113,7 +3113,7 @@ div[class^='highlight'] pre {
     margin-right: 12px;
     height: 45px;
     width: 45px;
-    background-color: #66a1fa;
+    background-color: #e6f7ff;
     padding: 5px;
     border-radius: 100%}
 .wy-nav-top i {
@@ -3231,7 +3231,7 @@ footer p {
     z-index: 400;
 }
 .rst-versions a {
-    color: #66a1fa;
+    color: #e6f7ff;
     text-decoration: none;
 }
 .rst-versions .rst-badge-small {
@@ -3493,7 +3493,7 @@ img {
     font-weight: bold;
 }
 .rst-content a tt {
-    color: #66a1fa;
+    color: #e6f7ff;
 }
 .rst-content dl {
     margin-bottom: 24px;
@@ -3516,7 +3516,7 @@ img {
     font-size: 90%;
     line-height: normal;
     background: #e7f2fa;
-    color: #66a1fa;
+    color: #e6f7ff;
     border-top: solid 3px #6ab0de;
     padding: 6px;
     position: relative;
@@ -3597,7 +3597,7 @@ span[id*='MathJax-Span'] {
 
 .main-header{
 	height:90px;
-	display:block;
+	display:none;
 	background-color: #e6f7ff; 
 	border-bottom: 2px solid green;
 
@@ -3703,20 +3703,20 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
 .wy-nav-content.colored{
 
-	border-color:#66a1fa; /*wrong color*/
+	border-color:#e6f7ff; /*wrong color*/
 
 }
 .menu-content-title li{
 	padding: 0.4045em 1.618em;
 	color:white;
-	background:#0e59d1; /*(content color)*/
+	background:#248f8f; /*(content color)*/
 }
 
 .wy-nav-side{
 	-webkit-transition: all 0.5s ease-in;
     	-moz-transition: all 0.5s ease-in;
     	transition: all 0.5s ease-in;
-	background-color: #216be0;/*( menu color)*/
+	background-color: #2eb8b8;/*( menu color)*/
 
 }
 
@@ -3901,12 +3901,12 @@ nav.stickynav {
 }
 
 .wy-nav-side {
-    background-color: #216be0; 
+    background-color: #2eb8b8; 
 
 }
 
 .wy-menu-vertical a {
-    background-color: #216be0; 
+    background-color: #2eb8b8; 
     color:rgba(0, 0, 0, 0.8); /*(link color tried2)*/
 }
 
