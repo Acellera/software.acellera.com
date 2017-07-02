@@ -3994,5 +3994,26 @@ nav.stickynav {
 
 /* end of hack to collapse */
 
+
+/*  Hack to collapse every l4 menus but the one of the current selection */
+
+.toctree-l4{
+    display:none;
+}
+
+.toctree-l4 a{
+    text-indent: 40px;
+}
+
+.toctree-l3.current > ul > li{
+    display:block;
+}
+
+
+/* end of hack to collapse */
+
+
+
+
 /*# sourceMappingURL=theme.css.map */﻿
 
