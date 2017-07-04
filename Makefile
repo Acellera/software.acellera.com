@@ -23,6 +23,8 @@ clean:
 	rm -rf $(BUILDDIR)/
 	rm -rf latest/source/htmd/*
 	rm -rf latest/source/parameterize/*
+	rm -rf latest/source/acecloud/*
+	rm -rf latest/source/aceflow/*
 
 publish:
 	scp -r $(BUILDDIR)/latest/html/* www.acellera.com:~/software.acellera.com/docs/latest
@@ -46,6 +48,10 @@ rst:
 	#For others
 	scp -r www.acellera.com:~/software.acellera.com/source/parameterize/* latest/source/parameterize
 	#scp -r www.acellera.com:~/software.acellera.com/source/parameterize/* stable/source/parameterize
+	scp -r www.acellera.com:~/software.acellera.com/source/acecloud/* latest/source/acecloud
+	#scp -r www.acellera.com:~/software.acellera.com/source/acecloud/* stable/source/acecloud
+	scp -r www.acellera.com:~/software.acellera.com/source/aceflow/* latest/source/aceflow
+	#scp -r www.acellera.com:~/software.acellera.com/source/aceflow/* stable/source/aceflow
 
 html: static rst
 	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) latest/source $(BUILDDIR)/latest/html
