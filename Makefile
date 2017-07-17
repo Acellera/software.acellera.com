@@ -53,7 +53,7 @@ rst:
 	scp -r www.acellera.com:~/software.acellera.com/source/aceflow/* latest/source/aceflow
 	#scp -r www.acellera.com:~/software.acellera.com/source/aceflow/* stable/source/aceflow
 
-html: static rst
+html: static
 	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) latest/source $(BUILDDIR)/latest/html
 	#$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) stable/source $(BUILDDIR)/stable/html
 	@echo
