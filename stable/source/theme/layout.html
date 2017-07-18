@@ -234,8 +234,12 @@
                 //alert("you are on stable");
                 $("#versionselector").find("[value='stable']").attr("selected", "selected");
             }
+			cversion=$("#versionselector").val();
+            curl=window.location.href;
             $('#versionselector').change(function(){
-                window.location.href = $('#versionselector option:selected').attr('url');
+				selected=$("#versionselector").val();
+				curl=curl.replace('/'+cversion+'/','/'+selected+'/');
+				window.location.href = curl;
             });
 			$('input[name=q]:first')
 				.mouseenter(function() {
