@@ -28,13 +28,14 @@ clean:
 
 publish:
 	scp -r $(BUILDDIR)/latest/html/* www.acellera.com:~/software.acellera.com/docs/latest
-	#scp -r $(BUILDDIR)/stable/html/* www.acellera.com:~/software.acellera.com/docs/stable
+	scp -r $(BUILDDIR)/stable/html/* www.acellera.com:~/software.acellera.com/docs/stable
 	scp -r $(BUILDDIR)/static/*  www.acellera.com:~/software.acellera.com/
 	ssh www.acellera.com 'chmod -R g+rwX software.acellera.com/'
 
 publish-test:
 	ssh www.acellera.com 'mkdir -p ~/software.acellera.com/test'
-	scp -r $(BUILDDIR)/html/* www.acellera.com:~/software.acellera.com/test/docs/
+	scp -r $(BUILDDIR)/latest/html/* www.acellera.com:~/software.acellera.com/test/docs/latest
+	scp -r $(BUILDDIR)/stable/html/* www.acellera.com:~/software.acellera.com/test/docs/stable
 	scp -r $(BUILDDIR)/static/*  www.acellera.com:~/software.acellera.com/test/
 	ssh www.acellera.com 'chmod -R g+rwX software.acellera.com/test'
 
@@ -44,16 +45,16 @@ static:
 
 rst:
 	scp -r www.acellera.com:~/software.acellera.com/source/htmd/latest/* latest/source/htmd
-	#scp -r www.acellera.com:~/software.acellera.com/source/htmd/stable/* stable/source/htmd
+	scp -r www.acellera.com:~/software.acellera.com/source/htmd/stable/* stable/source/htmd
 	#For others
 	scp -r www.acellera.com:~/software.acellera.com/source/parameterize/* latest/source/parameterize
-	#scp -r www.acellera.com:~/software.acellera.com/source/parameterize/* stable/source/parameterize
+	scp -r www.acellera.com:~/software.acellera.com/source/parameterize/* stable/source/parameterize
 	scp -r www.acellera.com:~/software.acellera.com/source/acecloud/* latest/source/acecloud
-	#scp -r www.acellera.com:~/software.acellera.com/source/acecloud/* stable/source/acecloud
+	scp -r www.acellera.com:~/software.acellera.com/source/acecloud/* stable/source/acecloud
 	scp -r www.acellera.com:~/software.acellera.com/source/aceflow/* latest/source/aceflow
-	#scp -r www.acellera.com:~/software.acellera.com/source/aceflow/* stable/source/aceflow
+	scp -r www.acellera.com:~/software.acellera.com/source/aceflow/* stable/source/aceflow
 
-html: static
+html: static rst
 	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) latest/source $(BUILDDIR)/latest/html
 	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) stable/source $(BUILDDIR)/stable/html
 	@echo
