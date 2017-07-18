@@ -3461,8 +3461,13 @@ img {
 .rst-content tt .xref, a .rst-content tt {
     font-weight: bold;
 }
+/*
 .rst-content a tt {
     color: #e6f7ff;
+}
+*/
+.rst-content a {
+    color:blue;
 }
 .rst-content dl {
     margin-bottom: 24px;
@@ -3485,7 +3490,7 @@ img {
     font-size: 90%;
     line-height: normal;
     background: #e7f2fa;
-    color: #e6f7ff;
+    color: #2A81B8;
     border-top: solid 3px #6ab0de;
     padding: 6px;
     position: relative;
@@ -3765,7 +3770,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     line-height: 30px;
 }
 .acellera-logo img {
-    height: 30px !important;
+    height: 40px !important;
     padding-left: 10px;
     vertical-align: middle;
     width:auto !important;
@@ -3944,6 +3949,23 @@ nav.stickynav {
     display:none;
 }
 .toctree-l2.current > ul > li{
+    display:block;
+}
+
+
+/* end of hack to collapse */
+
+/*  Hack to collapse every l4 menus but the one of the current selection */
+
+.toctree-l4{
+    display:none;
+}
+
+.toctree-l4 a{
+    text-indent: 40px;
+}
+
+.toctree-l3.current > ul > li{
     display:block;
 }
 

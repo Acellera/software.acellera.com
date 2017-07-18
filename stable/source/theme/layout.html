@@ -13,7 +13,7 @@
     ('http://workshop.htmd.org', 'workshop', 'Workshop'),
     ('https://github.com/Acellera/htmd/issues', 'github', 'Help'),
     ('https://github.com/Acellera/htmd', 'github', '<img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" height="30" width="30">'),
-	('https://www.youtube.com/user/acelleralive', 'youtube','<img src="https://cdn.pixabay.com/photo/2014/05/14/14/17/youtube-344106_960_720.png" height="50" width="70">'),
+	('https://www.youtube.com/user/acelleralive', 'Video tutorials', '<img src="/img/youtubeicon.png"> acelleralive'),
 ] -%}
 {% set active_page = active_page|default('documentation') -%}
 
@@ -94,7 +94,7 @@
 
  <div class='main-header'>
 	<div class='main-header-wrapper'>
-		<a class='project-name' href="/"> <img src="https://www.acellera.com/r/wp-content/uploads/2012/10/acellera_new_web.png" height="63" width="250"> </a> <!--"/home/alejandro/acelleraweb/software.acellera.com/static_files/img/acellera_new_web.png"-->
+		<a class='project-name' style="color:#284A87" href="/"> <img src="https://www.acellera.com/r/wp-content/uploads/2012/10/acellera_new_web.png" height="63" width="250"> </a> <!--"/home/alejandro/acelleraweb/software.acellera.com/static_files/img/acellera_new_web.png"-->
 		<div id="cssmenu">
 		<ul id="menu">
             {% for href, id, caption in navigation_bar %}
@@ -113,7 +113,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
         {% block sidebartitle %}
-          <a href="{{ pathto(master_doc) }}" class="project-name"> acellera </a> <!--image here of logo--> 
+          <a href="{{ pathto(master_doc) }}" class="project-name" style="color:#284A87"> acellera </a> <!--image here of logo--> 
         {% endblock %}
 	<div id="cssmenu">
 		<ul id="menu">
@@ -150,11 +150,13 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
 	<ul class='menu-content-title'><li>Contents</li></ul>
         {% block menu %}
-          {% set toctree = toctree(maxdepth=3, collapse=False, includehidden=True) %}
+          {% set toctree = toctree(maxdepth=4, collapse=False, includehidden=True) %}
           {% if toctree %}
               {{ toctree }}
 	<!--<ul class='searchbox-vertical'><li>{% include "searchbox.html" %}</li></ul>-->
-    {% include "versionbox.html" %}
+	<div id='versionbox' style='display:none;'>
+		{% include "versionbox.html" %}
+	</div>
           {% else %}
               <!-- Local TOC -->
               <div class="local-toc">{{ toc }}</div>
@@ -169,7 +171,7 @@
       {# MOBILE NAV, TRIGGLES SIDE NAV ON TOGGLE #}
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="{{ pathto(master_doc) }}">acellera</a> <!--image logo here?-->
+        <a href="{{ pathto(master_doc) }}"  style="color:#284A87">acellera</a> <!--image logo here?-->
       </nav>
 
 
@@ -211,7 +213,7 @@
 
   {# RTD hosts this file, so just load on non RTD builds #}
   {% if not READTHEDOCS %}
-    <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
+  <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
   {% endif %}
   <script type="text/javascript" src="{{ pathto('_static/js/custom.js', 1) }}"></script>
 
@@ -248,7 +250,12 @@
 						width: "100%",
 					}, 200 );	
 			    });
-            
+				//include here the pages that have versions in different elifs so they appear. Ask Alejandro.
+			if (window.location.href.indexOf("/htmd/") > -1) {
+				$('#versionbox').show();
+			}else{
+				$('#versionbox').hide();
+			}
 
         }) 
     </script>
