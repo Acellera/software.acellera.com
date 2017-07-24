@@ -281,7 +281,7 @@ h2, h3 {
 }
 
 .rst-content a {
-    color:blue;
+    color:#039BE5; /* LINK COLOR */
 }
 
 
@@ -3880,7 +3880,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     margin: auto;
    
     position: relative;
-    width: 90%; /*(set witdh of main content)*/
+    width: 100%; /*(set witdh of main content)*/
 }
 
 .wy-menu-vertical{
