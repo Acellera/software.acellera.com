@@ -1,4 +1,4 @@
-{% extends 'download.html' %}
+{% extends 'download_template.html' %}
 {% set title = 'Academic download' %}
 {% set active_page = 'download' %}
 {% block content %}
@@ -66,7 +66,7 @@
 		<p class="style1">It is generally not recommended updating the driver unless there is a necessary bug fix in a later version.
 		That, said, here is what you should do assuming the OS is CentOS:</p>
 
-		<ul>
+		<ul style="line-height:2.4;">
 		  <li>As root, “yum update”. Reboot if the kernel is updated.</li>
 		  <li>Download the new driver from <a style="color:#039BE5;" href="http://www.nvidia.com/Download/index.aspx">here</a></li>
 		  <li><code class="highlighter-rouge">chmod +x NVIDIA-Linux-x86_64-XXX.XX.run</code></li>
@@ -105,9 +105,8 @@
 		<p class="style1">Next, copy the script <code class="highlighter-rouge">$ACEMD_HOME/sglmd/etc/lmgrd.sglmd</code> to <code class="highlighter-rouge">/etc/init.d</code>. Edit the copy to include the correct value for <code class="highlighter-rouge">ACEMD_HOME</code> for your system. We recommend using <code class="highlighter-rouge">/opt/acellera</code></p>
 
 		<p class="style1">Add the license server as a system process and enable it at runlevel 3 and 5:</p>
-		<div class="highlighter-rouge"><pre class="highlight"><code>    # chkconfig --add lmgrd.sglmd
-			# chkconfig --level 35 lmgrd.sglmd on
-		</code></pre>
+		<div class="highlighter-rouge"><pre class="highlight"><code>    # chkconfig --add lmgrd.sglmd  </code></pre> 
+		<pre class="highlight"><code> 	# chkconfig --level 35 lmgrd.sglmd on</code></pre>
 		</div>
 		<p class="style1">Install the license file as <code class="highlighter-rouge">license.dat</code> in <code class="highlighter-rouge">ACEMD_HOME</code>. Ensure that its permissions allow it to be read under the sglmd user context.</p>
 

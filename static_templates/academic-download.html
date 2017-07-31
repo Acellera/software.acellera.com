@@ -1,4 +1,4 @@
-{% extends 'download.html' %}
+{% extends 'download_template.html' %}
 {% set title = 'Academic download' %}
 {% set active_page = 'download' %}
 {% block content %}
@@ -15,7 +15,7 @@
         <p class="style1">
             First, check if you already have conda:</p>
         <div class="style2">
-            <pre class="style3">  conda -V </pre>
+            <code  class="style3">  conda -V </code >
         </div>
         <p class="style1">
             If this command reports the conda version, follow to the <a style="color:#039BE5;" href="#installing-htmd">Installing HTMD</a>
@@ -56,7 +56,7 @@
             Now, to install the conda package manager, go to directory where to you downloaded the previous package and
             run: </p>
         <div class="style2">
-            <pre class="style3">  bash Miniconda3-latest-*-x86_64.sh</pre>
+            <code  class="style3">  bash Miniconda3-latest-*-x86_64.sh</code >
         </div>
         <p class="style1">
             And follow the instructions.</p>
@@ -68,9 +68,9 @@
         <p class="style1">
             With conda installed, you can now easily <span class="il">install</span> HTMD by running the following
             commands:</p>
-        <div class="style2"><pre class="style3"> conda config --add channels acellera
- conda config --add channels psi4
- conda <span class="il">install</span> htmd</pre>
+        <div class="style2"><code  class="style3"> conda config --add channels acellera</code > <br>
+		<code  class="style3">conda config --add channels psi4</code > <br>
+		<code  class="style3"> conda <span class="il">install</span> htmd</code > <br> <br>
         </div>
 
         <h2 class="style4">
@@ -80,7 +80,7 @@
         <p class="style1">
             Before using HTMD, please read the EULA and register using the command</p>
         <div class="style2">
-            <pre class="style3">  htmd_register</pre>
+            <code  class="style3">  htmd_register</code >
         </div>
 
         <p class="style1">
@@ -94,17 +94,17 @@
         <p class="style1">
             Start using HTMD by either starting an interactive Python shell:</p>
         <div class="style2">
-            <pre class="style3">  ipython</pre>
+            <code  class="style3">  ipython</code >
         </div>
         <p class="style1">
             Or by opening an ipython notebook:</p>
         <div class="style2">
-            <pre class="style3">  jupyter-notebook</pre>
+            <code  class="style3">  jupyter-notebook</code >
         </div>
         <p class="style1">
             On either case, import the module and start using HTMD:</p>
         <div class="style2">
-            <pre class="style3">  from htmd import *</pre>
+            <code  class="style3">  from htmd import *</code >
         </div>
 
         <h2 class="style4">
@@ -114,7 +114,7 @@
         <p class="style1">
             If you want to update HTMD to the latest version, run:</p>
         <div class="style2">
-            <pre class="style3">  conda update -c acellera -c psi4 htmd</pre>
+            <code  class="style3">  conda update -c acellera -c psi4 htmd</code >
         </div>
     </div>
 </div>
