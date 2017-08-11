@@ -1562,6 +1562,36 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 button[disabled] {
     cursor: default;
 }
+
+
+a.button:hover {
+    background-color: #284A87;
+    color: white !important;
+    box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.6);
+}
+
+a.button {
+    border: 1px solid #284A87;
+    border-radius: 800px;
+    color: #284A87;
+    display: block;
+    font-family: "Open Sans",sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    margin: 40px auto 80px;
+    padding: 10px 20px;
+    text-align: center;
+    transition: all 200ms ease-in 0s;
+    width: 60%;
+    margin: auto auto;
+    margin-bottom: 20px;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+
+
 .btn {
     display: inline-block;
     border-radius: 2px;
