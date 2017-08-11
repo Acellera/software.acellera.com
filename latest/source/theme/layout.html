@@ -13,7 +13,7 @@
     ('/download.html', 'download', 'Download'),
     ('http://workshop.htmd.org', 'workshop', 'Workshop'),
     ('https://github.com/Acellera/htmd/issues', 'github', 'Help'),
-    ('https://github.com/Acellera/htmd', 'github', '<img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" height="30" width="30">'),
+    ('https://github.com/Acellera/htmd', 'github', '<img src="/img/gitlogo.png" height="30" width="30">'),
 	('https://www.youtube.com/user/acelleralive', 'Video tutorials', '<img src="/img/youtubeicon.png"> acelleralive'),
 ] -%}
 {% set active_page = active_page|default('documentation') -%}
@@ -95,7 +95,7 @@
 
  <div class='main-header'>
 	<div class='main-header-wrapper'>
-		<a class='project-name' style="color:#284A87" href="https://www.acellera.com/"> <img src="https://www.acellera.com/r/wp-content/uploads/2012/10/acellera_new_web.png" height="63" width="250"> </a> <!--"/home/alejandro/acelleraweb/software.acellera.com/static_files/img/acellera_new_web.png"-->
+		<a class='project-name' style="color:#284A87" href="https://www.acellera.com/"> <img src="/img/acellera_new_web.png" height="63" width="250"> </a> <!--"/home/alejandro/acelleraweb/software.acellera.com/static_files/img/acellera_new_web.png"-->
 		<div id="cssmenu">
 		<ul id="menu">
             {% for href, id, caption in navigation_bar %}
@@ -114,7 +114,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
         {% block sidebartitle %}
-          <a href="{{ pathto(master_doc) }}" class="project-name" style="color:#284A87"> acellera </a> <!--image here of logo--> 
+          <a href="{{ pathto(master_doc) }}" class="project-name" style="color:#284A87"> <img src="/img/acellera_new_web.png" > </a> <!--image here of logo--> 
         {% endblock %}
 	<div id="cssmenu">
 		<ul id="menu">
@@ -176,7 +176,7 @@
       {# MOBILE NAV, TRIGGLES SIDE NAV ON TOGGLE #}
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="{{ pathto(master_doc) }}"  style="color:#284A87">acellera</a> <!--image logo here?-->
+        <a href="{{ pathto(master_doc) }}"  style="color:#284A87"><img src="/img/acellera_new_web.png" ></a> <!--image logo here?-->
       </nav>
 
 
@@ -248,16 +248,17 @@
             });
 			$('input[name=q]:first')
 				.mouseenter(function() {
-					//$('input[name=q]:first').css('width','300%')
+					var rt = $('.main-header-wrapper').offset().left + $('.main-header-wrapper').outerWidth() - $( 'input[name=q]:first').offset().left ;
+					//$('input[name=q]:first').css('width','200%')
 					$( 'input[name=q]:first').animate({
-						width: "300%",
-					}, 200 );
+						width: rt,
+					}, 100 );
 			    })
 				.mouseleave(function() {
 					//$('input[name=q]:first').css('width','100%')
 					$( 'input[name=q]:first').animate({
 						width: "100%",
-					}, 200 );	
+					}, 100 );	
 			    });
 				//include here the pages that have versions in different elifs so they appear. Ask Alejandro.
 			if (window.location.href.indexOf("/htmd/") > -1) {
