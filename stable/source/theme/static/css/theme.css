@@ -1820,7 +1820,7 @@ a.button {
 }
 .wy-dropdown-arrow:before {
     content: " ";
-    border-bottom: 5px solid #f5f5f5;
+    border-bottom: 5px solid #D7D7D7;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     position: absolute;
@@ -2890,7 +2890,7 @@ div[class^='highlight'] pre {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 80%;
-    color: #F5F5F5;
+    color: #D7D7D7;
     white-space: nowrap;
 }
 .wy-menu-vertical ul {
@@ -2910,7 +2910,7 @@ div[class^='highlight'] pre {
 .wy-menu-vertical{
 
 	/*background-color:rgba(0,0,0,0.1);*/
-	background-color:#F5F5F5; /*#2eb8b8background color , different from ul inside wy-menu-vertical*/
+	background-color:#D7D7D7; /*#2eb8b8background color , different from ul inside wy-menu-vertical*/
 
 }
 
@@ -3748,14 +3748,14 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 .menu-content-title li{
 	padding: 10px 10px;
 	color:rgba(0,0,0,0.7);
-	background:#F5F5F5; //content color
+	background:#D7D7D7; //content color
 }
 
 .wy-nav-side{
 	-webkit-transition: all 0.5s ease-in;
     	-moz-transition: all 0.5s ease-in;
     	transition: all 0.5s ease-in;
-	background-color: #F5F5F5;/* menu color*/
+	background-color: #D7D7D7;/* menu color*/
 
 }
 
@@ -3806,7 +3806,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 #cssmenu ul li {
     display: inline-block;
-    margin: 0;
+    margin-left: -6px;
     padding: 0;
     line-height:45px;
 }
@@ -3935,12 +3935,12 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 	}
 
 	.wy-nav-side {
-		background-color: #F5F5F5; 
+		background-color: #D7D7D7; 
 
 	}
 
 	.wy-menu-vertical a {
-		background-color: #F5F5F5; 
+		background-color: #D7D7D7; 
 		color:rgba(0, 0, 0, 0.8); //link color tried2
 	}
 
