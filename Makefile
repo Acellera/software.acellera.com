@@ -25,12 +25,13 @@ clean:
 	rm -rf latest/source/parameterize/*
 	rm -rf latest/source/acecloud/*
 	rm -rf latest/source/aceflow/*
+	rm -rf latest/source/acemd/*
 
 publish:
 	scp -r $(BUILDDIR)/latest/html/* www.acellera.com:~/software.acellera.com/docs/latest
 	scp -r $(BUILDDIR)/stable/html/* www.acellera.com:~/software.acellera.com/docs/stable
 	scp -r $(BUILDDIR)/static/*  www.acellera.com:~/software.acellera.com/
-	ssh www.acellera.com 'chmod -R g+rwX software.acellera.com/'
+	ssh www.acellera.com 'chgrp -R www-htmd software.acellera.com/; chmod -R g+rwX software.acellera.com/'
 
 publish-test:
 	ssh www.acellera.com 'mkdir -p ~/software.acellera.com/test'
@@ -53,6 +54,8 @@ rst:
 	scp -r www.acellera.com:~/software.acellera.com/source/acecloud/* stable/source/acecloud
 	scp -r www.acellera.com:~/software.acellera.com/source/aceflow/* latest/source/aceflow
 	scp -r www.acellera.com:~/software.acellera.com/source/aceflow/* stable/source/aceflow
+	scp -r www.acellera.com:~/software.acellera.com/source/acemd/* latest/source/acemd
+	scp -r www.acellera.com:~/software.acellera.com/source/acemd/* stable/source/acemd
 
 html: static rst
 	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) latest/source $(BUILDDIR)/latest/html
