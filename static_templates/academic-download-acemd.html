@@ -44,21 +44,11 @@
 
 		
         <h1 style="font-size:2.25em;margin-right:0px;margin-bottom:16px;margin-left:0px;line-height:1.2;padding-bottom:0.3em;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(238,238,238);color:rgb(51,51,51);font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;margin-top:20px!important">
-            Install ACEMD Pro</h1>
+            Getting ACEMD Pro</h1>
         <p class="style1"> 
-        If you have purchases an ACEMD Pro node-locked license from Acellera you will be issued with an activation token. After following the installation instructions above, issue the command:
+			ACEMD Pro lets you use all your GPU units. You can find information and how to get it <a href="acemd-pro-download.html">here</a>
 		</p>
-		
-		<div class="highlighter-rouge"><pre class="highlight"><code> $ activate_license [activation-token]</code></pre>
-		
-		<p class="style1"> 		
-		This will download and install your license key. If any error is reported please contact Acellera.</p>
-		<p class="style1"> 
-		ACEMD may then be run from the command line with the command acemd, or via HTMD</p>
-		<p class="style1"> 
-		Customers purchasing group/floating license will receive additional installation download details for Acellera’s license server along with their order confirmation. The installation guide for the license server is below.</p>
-		<p class="style1"> 
-		If you have obtained ACEMD Pro as part of a Metrocubo solution, you will receive the machine with ACEMD installed, configured and ready to run.</p>
+
 		
 		<h1 style="font-size:2.25em;margin-right:0px;margin-bottom:16px;margin-left:0px;line-height:1.2;padding-bottom:0.3em;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(238,238,238);color:rgb(51,51,51);font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;margin-top:20px!important">
             Nvidia driver update procedure</h1>	
@@ -90,49 +80,8 @@
 		</div>
 		<p class="style1">If you receive any errors, check that the MPI development packages and C compiler are installed. If successful, the libmpiwrapper.so in the lib directory will be reconfigured for your system.</p>
 
-		<h2 id="license-server">License Server</h2>
 
-		<p class="style1">Floating licenses allow ACEMD to be used on any machine, subject to a limit on the number of concurrent instances. Floating licenses require a license server to be running. This should be installed on a machine that all clients can connect to over the network. In a cluster environment, for example, it should be run on an administrative machine.</p>
-
-		<p class="style1">The following instructions assume that you have administrative/root access to the machine in question, that the Operating System is Red Hat EL6, and that you wish to configure the license server to run automatically as a system service.</p>
-
-		<p class="style1">first download the license server <a href="https://download.acellera.com/acemd-release-2016/acellera-license-server.tgz">here</a>.</p>
-
-		<p class="style1">To install the license server, first create a new userid for it, for example:</p>
-		<div class="highlighter-rouge"><pre class="highlight"><code>    # useradd sglmd
-		</code></pre>
-		</div>
-		<p class="style1">Next, copy the script <code class="highlighter-rouge">$ACEMD_HOME/sglmd/etc/lmgrd.sglmd</code> to <code class="highlighter-rouge">/etc/init.d</code>. Edit the copy to include the correct value for <code class="highlighter-rouge">ACEMD_HOME</code> for your system. We recommend using <code class="highlighter-rouge">/opt/acellera</code></p>
-
-		<p class="style1">Add the license server as a system process and enable it at runlevel 3 and 5:</p>
-		<div class="highlighter-rouge"><pre class="highlight"><code>    # chkconfig --add lmgrd.sglmd  </code></pre> 
-		<pre class="highlight"><code> 	# chkconfig --level 35 lmgrd.sglmd on</code></pre>
-		</div>
-		<p class="style1">Install the license file as <code class="highlighter-rouge">license.dat</code> in <code class="highlighter-rouge">ACEMD_HOME</code>. Ensure that its permissions allow it to be read under the sglmd user context.</p>
-
-		<p class="style1">Start the license server using:</p>
-		<div class="highlighter-rouge"><pre class="highlight"><code>    # service lmgrd.sglmd start
-		</code></pre>
-		</div>
-
-		<p class="style1">The license server will produce a log file in /var/log/lmgrd.sglmd. Check this file to confirm that all is working:</p>
-
-		<div class="highlighter-rouge"><pre class="highlight"><code>    $ head -2 /var/log/lmgrd.sglmd
-			2013/01/01 00:00:00 Server starting on host.example.com, port 27000, max components 64, max connections 256
-			Enabling acemd 1.0 60 28-apr-2014 
-			Ready...
-		</code></pre>
-		</div>
-
-		<p class="style1">Check that the license components available matchthose purchased (in this example 60 acemd tokens with expiry date 28 April 2014).</p>
-
-		<p class="style1">Finally, ensure that the environment variable <code class="highlighter-rouge">SG_LICENSE_FILE</code> is set with the connection details of the license server. This has the format port@hostname. The default port number is 27000. For example:</p>
-
-		<div class="highlighter-rouge"><pre class="highlight"><code>    $ export SG_LICENSE_FILE=27000@host.example.com
-		</code></pre>
-		</div>
-
-		<p class="style1">If you encounter any problems installing the license server, please contact us directly at support@acellera.com</p>
+		<p class="style1">If you encounter any problems installing ACEMD Basic or Pro, please contact us directly at support@acellera.com</p>
 
 
     </div>

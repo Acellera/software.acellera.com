@@ -248,7 +248,13 @@
             });
 			$('input[name=q]:first')
 				.mouseenter(function() {
-					var rt = $('.main-header-wrapper').offset().left + $('.main-header-wrapper').outerWidth() - $( 'input[name=q]:first').offset().left ;
+					var rt = $('.main-header-wrapper').offset().left + $('.main-header-wrapper').outerWidth() - $( 'input[name=q]:first').offset().left - 20;
+					var rt2 = $(window).width() - $( 'input[name=q]:first').offset().left - 20;
+					
+					if (rt2<rt){
+					    rt=rt2;	
+					}
+					
 					//$('input[name=q]:first').css('width','200%')
 					$( 'input[name=q]:first').animate({
 						width: rt,

@@ -9,10 +9,28 @@
 		<h1 style="font-size:2.25em;margin-right:0px;margin-bottom:16px;margin-left:0px;line-height:1.2;padding-bottom:0.3em;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(238,238,238);color:rgb(51,51,51);font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;margin-top:20px!important">
             Getting the license</h1>
             
-            <p class="style1"> In order to enjoy the full usage of ACEMD, you need to purchase a license.</p>
-            
-            <a class="button" href='https://www.acellera.com/contact/' class='btn btn-primary btn-md'>Contact Us to get it</a>
+		<p class="style1"> 
+		In order to use the full functionality of HTMD, you have to purchase a license or a Metrocubo unit. You can also try HTMD for free with fewer capabilities.
+		</p>
+		<br>
+		
+		<center>
+			<table>
+			<tbody>
+			<tr><td style="width:30%;"><center>Purchase a license</center></td> <td style="width:30%;"><center>Try the basic version of HTMD for free</center></td></tr>
+			<tr><td style="margin-right:200px;" > <center><a class="button" href='https://www.acellera.com/contact/' class='btn btn-primary btn-block'>Contact us to get it</a></center> </td><td><center> <a class="button" href='http://software.acellera.com/academic-download.html' class='btn btn-primary btn-block'> Try free HTMD</a></center>   </td</tr>
+			</tbody>
+			</table>          
+		</center>
 
+
+        <h1 style="font-size:2.25em;margin-right:0px;margin-bottom:16px;margin-left:0px;line-height:1.2;padding-bottom:0.3em;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(238,238,238);color:rgb(51,51,51);font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;margin-top:20px!important">
+            Do you already have a license?</h1>
+
+		<p class="style1"> 
+			If you have a license, you only need to install HTMD following the guide below and then follow the instructions in the <a href="#handling-license"> handling licenses section</a> to activate it.
+		</p>            
+            
 
         <h1 style="font-size:2.25em;margin-right:0px;margin-bottom:16px;margin-left:0px;line-height:1.2;padding-bottom:0.3em;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(238,238,238);color:rgb(51,51,51);font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;margin-top:20px!important">
             Getting HTMD</h1>
@@ -98,6 +116,86 @@
             If you don't accept the EULA and register at this point, HTMD will prompt for registration when the Python
             module is imported </pre>
 
+
+        <h2 class="style4">
+            <div id="handling-license"></div>
+            Handling your license.
+        </h2>
+    
+		<p class="style1"> If you have already purchased a license and install HTMD, you only have to activate the license:
+		</p>
+
+		<p class="style1"> 
+		<i class="fa fa-circle" style="font-size:12px"></i> If you have purchased an <b>HTMD license</b> from Acellera you will be issued with an activation token. Once the installation has finished, issue the command:</b>
+		</p>
+		
+		<div class="highlighter-rouge" style="margin-left:20px;"><pre class="highlight"><code> $ activate_license [activation-token]</code></pre></div>	
+
+<!--
+		<p class="style1"> 
+		<i class="fa fa-circle" style="font-size:12px"></i> Customers purchasing <b>group/floating license</b> will receive additional installation download details for Acellera’s license server along with their order confirmation.
+		The installation guide for the license server is <a href="#license-server" > below </a>.
+		</p>
+		
+-->
+		
+		<p class="style1"> 
+		<i class="fa fa-circle" style="font-size:12px"></i> If you have obtained HTMD Pro as part of a <b>Metrocubo solution</b>, you will receive the machine with ACEMD and HTMD installed, configured and ready to run.
+		</p>
+	
+		<p class="style1"> 
+		Make sure you have added your installation path to the PATH environment variable. Also, sometimes closing the terminal you have used to do the installation and open a new one helps.
+		</p>
+		
+		
+<!--
+		<h2 id="license-server">License Server</h2>
+
+		<p class="style1">Floating licenses allow ACEMD to be used on any machine, subject to a limit on the number of concurrent instances. Floating licenses require a license server to be run. This should be installed on a machine that all clients can connect to over the network. In a cluster environment, for example, it should be run on an administrative machine.</p>
+
+		<p class="style1">The following instructions assume that you have administrative/root access to the machine in question, that the Operating System is Red Hat EL6, and that you wish to configure the license server to run automatically as a system service.</p>
+
+		<p class="style1">1) First download the license server <a href="https://download.acellera.com/acemd-release-2016/acellera-license-server.tgz">here</a>.</p>
+
+		<p class="style1">2) To install the license server, first create a new userid for it, for example:</p>
+		<div class="highlighter-rouge"><pre class="highlight"><code>    # useradd sglmd
+		</code></pre>
+		</div>
+		<p class="style1">3) Next, copy the script <code class="highlighter-rouge">$ACEMD_HOME/sglmd/etc/lmgrd.sglmd</code> to <code class="highlighter-rouge">/etc/init.d</code>. Edit the copy to include the correct value for <code class="highlighter-rouge">ACEMD_HOME</code> for your system. We recommend using <code class="highlighter-rouge">/opt/acellera</code></p>
+
+		<p class="style1">4) Add the license server as a system process and enable it at runlevel 3 and 5:</p>
+		<div class="highlighter-rouge"><pre class="highlight"><code>    # chkconfig --add lmgrd.sglmd  </code></pre> 
+		<pre class="highlight"><code> 	# chkconfig --level 35 lmgrd.sglmd on</code></pre>
+		</div>
+		<p class="style1">5) Install the license file as <code class="highlighter-rouge">license.dat</code> in <code class="highlighter-rouge">ACEMD_HOME</code>. Ensure that its permissions allow it to be read under the sglmd user context.</p>
+
+		<p class="style1">6) Start the license server using:</p>
+		<div class="highlighter-rouge"><pre class="highlight"><code>    # service lmgrd.sglmd start
+		</code></pre>
+		</div>
+
+		<p class="style1">7) The license server will produce a log file in /var/log/lmgrd.sglmd. Check this file to confirm that all is working:</p>
+
+		<div class="highlighter-rouge"><pre class="highlight"><code>    $ head -2 /var/log/lmgrd.sglmd
+			2013/01/01 00:00:00 Server starting on host.example.com, port 27000, max components 64, max connections 256
+			Enabling acemd 1.0 60 28-apr-2014 
+			Ready...
+		</code></pre>
+		</div>
+
+		<p class="style1">8) Check that the license components available match those purchased (in this example 60 acemd tokens with expiry date 28 April 2014).</p>
+
+		<p class="style1">9) Finally, ensure that the environment variable <code class="highlighter-rouge">SG_LICENSE_FILE</code> is set with the connection details of the license server. This has the format port@hostname. The default port number is 27000. For example:</p>
+
+		<div class="highlighter-rouge"><pre class="highlight"><code>    $ export SG_LICENSE_FILE=27000@host.example.com
+		</code></pre>
+		</div>
+
+		<p class="style1">If you encounter any problems installing the license server, please contact us directly at <a href="mailto:support@acellera.com">support@acellera.com </a>. </p>
+
+-->
+
+
         <h2 class="style4">
             <div id="start-using-htmd"></div>
             Start using HTMD
@@ -118,7 +216,7 @@
             On either case, import the module and start using HTMD:</p>
 
         <div class="style2">
-            <code  class="style3">  from htmd import *</code >
+            <code  class="style3">  from htmd.ui import *</code >
         </div>
         <br>
         <h2 class="style4">
@@ -128,8 +226,12 @@
         <p class="style1">
             If you want to update HTMD to the latest version, run:</p>
         <div class="style2">
-            <code  class="style3">  conda update -c acellera -c psi4 htmd</code >
+            <code  class="style3">  conda update -c acellera -c psi4 htmd</code >           
         </div>
+        
+        <br>
+        <p class="style1">If you have any doubts, please do not hesitate to email us at <a href="mailto:support@acellera.com">support@acellera.com </a></p>
+        
     </div>
 </div>
 {% endblock %}
