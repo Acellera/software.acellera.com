@@ -61,4 +61,4 @@ html: static rst
 	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) latest/source $(BUILDDIR)/latest/html
 	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) stable/source $(BUILDDIR)/stable/html
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html"
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/latest/html and $(BUILDDIR)/stable/html"
