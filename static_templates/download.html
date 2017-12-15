@@ -1,8 +1,39 @@
 {% extends 'download_template.html' %}
 {% block content %}
 	<h3>The official site to download acellera's software.</h3>
-	<center><a class="button" href='./download_acemd.html'>ACEMD</a></center><br>
-	<center><a class="button" href='./download_htmd.html'>HTMD</a></center><br>
-	<center><a class="button" href='./academic-download-acecloud.html'>AceCloud</a></center><br>
+	
+	<table class="download_table">
+
+	<tr> <td rowspan="3"><img src="./img/htmdlogo.jpg" width="300" height="300"></td> <td>HTMD Non-Profit</td>   <td> Pro HTMD</td></tr>
+	<tr> <td><a class="button" href='./academic-download-htmd.html'>Download</a></td>  <td><a class="button" href='https://www.acellera.com/contact/'>Contact Us!</a></td></tr>
+	<tr> <td>*Only for non-profit use</td>   <td>For commercial use</td></tr>	
+
+	</table>
+
+
+	<br><br><br><br>
+
+	<table class="download_table">
+	<tr> <td rowspan="3"><img src="./img/acemdlogo.png" width="300" height="300"></td> <td>ACEMD Basic</td>   <td> ACEMD PRO</td></tr>
+	<tr> <td><a class="button" href='./academic-download-acemd.html'>Download</a></td>  <td><a class="button" href='https://www.acellera.com/contact/'>Contact Us!</a></td></tr>
+	<tr> <td>For everybody, limited to 1 GPU</td>   <td>Unlimited GPUs</td></tr>	
+	</table>
+
+	<br><br><br><br>
+
+	<table class="download_table">
+	<tr> <td rowspan="3"><img src="./img/acecloudlogo.png"></td> <td>AceCloud</td> </tr>
+	<tr> <td><a class="button" href='./academic-download-acecloud.html'>Download</a></td> </tr>
+	<tr> <td>For everybody</td> </tr>		
+	</table>
+
+	<br><br><br><br>
+
+	<table class="download_table">
+	<tr> <td rowspan="2"><img src="./img/aceflowlogo.png" width="300"></td> <td>AceFlow</td> </tr>
+	<tr> <td><a class="button" href='https://www.acellera.com/contact/'>Contact Us!</td>  </tr>
+	</table>
+
 {% endblock %}
 
+width="300" height="300"

@@ -13,7 +13,15 @@
 	outline: 0;
 }
 
+.download_table th, td{
+    padding-left: 20px;
+    padding-right: 20px;  
+    text-align: center;
+}
 
+.download_table table { 
+    border-collapse: collapse; 
+}
 
 * {
     -webkit-box-sizing: border-box;
@@ -1584,7 +1592,7 @@ a.button {
     padding: 10px 20px;
     text-align: center;
     transition: all 200ms ease-in 0s;
-    width: 60%;
+    width: 100%;
     margin: auto auto;
     margin-bottom: 20px;
     max-width: 400px;
