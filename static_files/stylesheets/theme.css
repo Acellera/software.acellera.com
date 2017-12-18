@@ -14,13 +14,25 @@
 }
 
 .download_table th, td{
+	vertical-align: text-bottom;
     padding-left: 20px;
     padding-right: 20px;  
+    padding-top: 10px;
+    padding-bottom: 10px;  
     text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
 }
+
 
 .download_table table { 
     border-collapse: collapse; 
+    border: 1px solid black;
+	vertical-align: text-bottom;
+}
+
+.download_table td{
+	vertical-align: text-bottom;
 }
 
 * {
