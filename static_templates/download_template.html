@@ -25,7 +25,8 @@
 	<script src="./javascripts/scrollToTop.js"></script>
 	<script src="./javascripts/theme.js"></script>
 	<link rel="stylesheet" href="./stylesheets/slicknav.min.css"></link> 
-	<script src="./javascripts/jquery.slicknav.min.js"></script>
+	<script src="./javascripts/jquery.slicknav.min.js"></script>	
+	
 	
 <!--
 	<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700,800"></link>
@@ -130,19 +131,16 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class='menu-content-title'><li>Contents</li></ul>
+	<ul class='menu-content-title'><li></li></ul>
 		<ul>
-			<li class="toctree-l1"><a class="reference internal" href="./download_htmd.html">HTMD</a></li>
-			<li class="toctree-l1"><a class="reference internal" href="./download_acemd.html">ACEMD</a></li>
-			<li class="toctree-l1"><a class="reference internal" href="./academic-download-acecloud.html">AceCloud</a></li>
+			{% block index %}
+			{% endblock index %}
 		</ul>
 
       </div>
       &nbsp;
     </nav>
 
-
-	
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
@@ -233,21 +231,41 @@
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<script type="text/javascript" src="_static/jquery.js"></script>
+	<script type="text/javascript" src="_static/underscore.js"></script>
+	<script type="text/javascript" src="_static/doctools.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-  
-
-  
-  
     <script type="text/javascript" src="_static/js/theme.js"></script>
   
     <script type="text/javascript" src="_static/js/custom.js"></script>
 
-      <script type="text/javascript">
+	<script type="text/javascript">
         $(document).ready(function(){ 
+			$('#mpip').css('display','none');
+			$('#driverupp').css('display','none');
+			
+			$("#mpi").click(function(){
+				if ( $("#mpip").css('display') == 'none' ){
+					$('#mpip').css('display','inline-block');
+					$('#mpi').attr("src","./img/upicon.png");
+				}else{
+					$('#mpip').css('display','none');
+					$('#mpi').attr("src","./img/downicon.png");
+				}
+			});
+			
+			$("#driverup").click(function(){
+				
+				if ( $("#driverupp").css('display') == 'none' ){
+					$('#driverupp').css('display','inline-block');
+					$("#driverup").attr("src","./img/upicon.png");
+				}else{
+					$('#driverupp').css('display','none');
+					$("#driverup").attr("src","./img/downicon.png");
+				}
+			});
+			
             if (window.location.href.indexOf("/latest/") > -1) {
                 //alert("you are on latest");
                 $("#versionselector").find("[value='latest']").attr("selected", "selected");
@@ -282,7 +300,7 @@
 
         }) 
     </script>
-  
+
 
   <script type="text/javascript">
       jQuery(function () {
@@ -290,7 +308,7 @@
       });
   </script>
 
-  <script ><script src="/javascripts/scrollToTop.js"></script> 
+  <script src="/javascripts/scrollToTop.js"></script> 
 
 </body>
 </html>

@@ -1,6 +1,17 @@
 {% extends 'download_template.html' %}
 {% set title = 'Academic download' %}
 {% set active_page = 'download' %}
+
+{% block index %}
+
+<li class="toctree-l1"><a class="reference internal" href="#pack">Getting the package installer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#inst">Install HTMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#reghtmd">Register HTMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#start">Start using HTMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#update">Update HTMD</a></li>
+
+{% endblock index %}
+
 {% block content %}
 <div style="padding-top:10px; padding-bottom:30px;" id="allbody">
     <div style="width:90%; margin: auto auto;">
@@ -13,7 +24,7 @@
 			Please bear in mind that this free version does not have all the functionalities of HTMD Pro, which you can use by purchasing a license (<a href="pro-download.html"> Show me how</a>). 
 		</p>
 
-        <h2 class="style4">
+        <h2 id="pack" class="style4">
             Getting the package installer</h2>
 
         <p class="style1">
@@ -67,7 +78,7 @@
         <p class="style1">
             And follow the instructions.</p>
 
-        <h2 class="style4">
+        <h2 id="inst"class="style4">
             <div id="installing-htmd"></div>
             Installing HTMD
         </h2>
@@ -79,7 +90,7 @@
 		<code  class="style3"> conda <span style="color:orange;">install</span> htmd</code > <br> <br>
         </div>
 
-        <h2 class="style4">
+        <h2 id="reghtmd" class="style4">
             <div id="start-using-htmd"></div>
             Register HTMD
         </h2>
@@ -93,7 +104,7 @@
             If you don't accept the <a href="http://software.acellera.com/news/license.pdf">EULA</a> and register at this point, HTMD will prompt for registration when the Python
             module is imported </pre>
 
-        <h2 class="style4">
+        <h2 id="start" class="style4">
             <div id="start-using-htmd"></div>
             Start using HTMD
         </h2>
@@ -116,7 +127,7 @@
             <code  class="style3">  from htmd import *</code >
         </div>
         <br>
-        <h2 class="style4">
+        <h2 id="update" class="style4">
             <div id="updating-htmd"></div>
             Updating HTMD
         </h2>
