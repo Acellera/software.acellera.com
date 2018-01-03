@@ -1,16 +1,2 @@
 .idea/
 build/
-
-# Ignore sources for latest
-latest/source/htmd/
-latest/source/parameterize/
-latest/source/acemd/
-latest/source/acecloud/
-latest/source/aceflow/
-
-# Ignore sources for stable
-stable/source/htmd/
-stable/source/parameterize/
-stable/source/acemd/
-stable/source/acecloud/
-stable/source/aceflow/
