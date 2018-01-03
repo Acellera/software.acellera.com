@@ -21,11 +21,11 @@ help:
 
 clean:
 	rm -rf $(BUILDDIR)/
-	rm -rf latest/source/htmd/*
-	rm -rf latest/source/parameterize/*
-	rm -rf latest/source/acecloud/*
-	rm -rf latest/source/aceflow/*
-	rm -rf latest/source/acemd/*
+	for release in latest stable; do \
+		for software in acecloud aceflow acemd acemd3 htmd parameterize; do \
+			find $$release/source/$$software -mindepth 1 ! -name ".gitignore" -delete; \
+		done \
+	done
 
 publish:
 	scp -r $(BUILDDIR)/latest/html/* www.acellera.com:~/software.acellera.com/docs/latest
@@ -56,6 +56,8 @@ rst:
 	scp -r www.acellera.com:~/software.acellera.com/source/aceflow/* stable/source/aceflow
 	scp -r www.acellera.com:~/software.acellera.com/source/acemd/* latest/source/acemd
 	scp -r www.acellera.com:~/software.acellera.com/source/acemd/* stable/source/acemd
+	scp -r www.acellera.com:~/software.acellera.com/source/acemd3/* latest/source/acemd3
+	scp -r www.acellera.com:~/software.acellera.com/source/acemd3/* stable/source/acemd3
 
 html: static rst
 	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) latest/source $(BUILDDIR)/latest/html
