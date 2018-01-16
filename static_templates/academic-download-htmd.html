@@ -1,24 +1,30 @@
 {% extends 'download_template.html' %}
 {% set title = 'Academic download' %}
 {% set active_page = 'download' %}
+
+{% block index %}
+
+<li class="toctree-l1"><a class="reference internal" href="#pack">Getting the package installer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#inst">Install HTMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#reghtmd">Register HTMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#start">Start using HTMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#update">Update HTMD</a></li>
+
+{% endblock index %}
+
 {% block content %}
 <div style="padding-top:10px; padding-bottom:30px;" id="allbody">
     <div style="width:90%; margin: auto auto;">
-		
-		<h1 style="font-size:2.25em;margin-right:0px;margin-bottom:16px;margin-left:0px;line-height:1.2;padding-bottom:0.3em;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(238,238,238);color:rgb(51,51,51);font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;margin-top:20px!important">
-            Getting the license</h1>
-            
-            <p class="style1"> In order to enjoy the full usage of HTMD, you need to purchase a license.</p>
-            
-            <a class="button" href='https://www.acellera.com/contact/' class='btn btn-primary btn-md'>Contact Us to get it</a>
-		
 
         <h1 style="font-size:2.25em;margin-right:0px;margin-bottom:16px;margin-left:0px;line-height:1.2;padding-bottom:0.3em;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(238,238,238);color:rgb(51,51,51);font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;margin-top:20px!important">
-            Do you already have a license?</h1>
-            
-            <p class="style1"> If you already have a license you only have to install HTMD.  Please follow the instructions below and do not hesitate to contact us  (<a href="mailto:support@acellera.com">support@acellera.com</a>) if you have any problems </p>
+            Getting HTMD</h1>
 
-        <h2 class="style4">
+
+		<p class="style1">
+			Please bear in mind that this free version does not have all the functionalities of HTMD Pro, which you can use by purchasing a license (<a href="pro-download.html"> Show me how</a>). 
+		</p>
+
+        <h2 id="pack" class="style4">
             Getting the package installer</h2>
 
         <p class="style1">
@@ -72,19 +78,22 @@
         <p class="style1">
             And follow the instructions.</p>
 
-        <h2 class="style4">
+        <h2 id="inst"class="style4">
             <div id="installing-htmd"></div>
             Installing HTMD
         </h2>
         <p class="style1">
             With conda installed, you can now easily <span style="color:orange;">install</span> HTMD by running the following
             commands:</p>
+<!--
         <div class="style2"><code  class="style3"> conda config --add channels acellera</code > <br>
 		<code  class="style3">conda config --add channels psi4</code > <br>
-		<code  class="style3"> conda <span style="color:orange;">install</span> htmd</code > <br> <br>
+-->
+		<div class="style2">
+		<code  class="style3"> conda <span style="color:orange;">install</span> -c acellera -c psi4 htmd</code > <br> <br>
         </div>
 
-        <h2 class="style4">
+        <h2 id="reghtmd" class="style4">
             <div id="start-using-htmd"></div>
             Register HTMD
         </h2>
@@ -98,7 +107,7 @@
             If you don't accept the <a href="http://software.acellera.com/news/license.pdf">EULA</a> and register at this point, HTMD will prompt for registration when the Python
             module is imported </pre>
 
-        <h2 class="style4">
+        <h2 id="start" class="style4">
             <div id="start-using-htmd"></div>
             Start using HTMD
         </h2>
@@ -121,7 +130,7 @@
             <code  class="style3">  from htmd import *</code >
         </div>
         <br>
-        <h2 class="style4">
+        <h2 id="update" class="style4">
             <div id="updating-htmd"></div>
             Updating HTMD
         </h2>
@@ -130,6 +139,7 @@
         <div class="style2">
             <code  class="style3">  conda update -c acellera -c psi4 htmd</code >
         </div>
+        
     </div>
 </div>
 {% endblock %}
