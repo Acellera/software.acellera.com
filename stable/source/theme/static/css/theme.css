@@ -47,6 +47,7 @@ body {
     margin: 0;
     background-color:rgb(255,255,255,0.7);
 /*
+    this was part of a fix for a scroll bar issue
     height: 100% !important;
     overflow-y: hidden;
 */
