@@ -1558,7 +1558,7 @@ a .fa, a .rst-content .admonition-title, .rst-content a .admonition-title, a .rs
     opacity: 1;
     height: 56px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
     .wy-tray-container {
     bottom: auto;
     top: 0;
@@ -2293,7 +2293,7 @@ input[type="radio"][disabled], input[type="checkbox"][disabled] {
     font-size: 80%;
     padding: 6px 0;
 }
-}@media screen and (max-width: 1200px) {
+}@media screen and (max-width: 768px) {
     .tablet-hide {
     display: none;
 }
@@ -3225,7 +3225,7 @@ footer p {
 #search-results .context {
     color: gray;
     font-size: 90%}
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
     .wy-body-for-nav {
     background: #fcfcfc;
 }
@@ -3233,7 +3233,7 @@ footer p {
     display: block;
 }
 .wy-nav-side {
-    left: -400px;
+    left: -300px;
 }
 .wy-nav-side.shift {
     width: 85%;
@@ -3378,7 +3378,7 @@ footer p {
     display: block;
     text-align: center;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
     .rst-versions {
     width: 85%;
     display: none;
@@ -3938,7 +3938,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
 }
 
-@media (max-width:1200px){
+@media (max-width:1085px){
 
 	.searchbox-vertical{
 		display:none;
