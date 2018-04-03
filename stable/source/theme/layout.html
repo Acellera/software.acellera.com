@@ -162,6 +162,9 @@
 	<div id='versionbox' style='display:none;'>
 		{% include "versionbox.html" %}
 	</div>
+	<div id='feedbackbox' style='display:block;clear:both;'>
+		{% include "feedbackbox.html" %}
+	</div>
           {% else %}
               <!-- Local TOC -->
               <div class="local-toc">{{ toc }}</div>
@@ -232,6 +235,11 @@
   {% endif %}
     <script type="text/javascript">
         $(document).ready(function(){ 
+
+	    $("#showform").click(function(){
+		$("#suggestion-wrapper").toggle();
+	    });
+
             if (window.location.href.indexOf("/latest/") > -1) {
                 //alert("you are on latest");
                 $("#versionselector").find("[value='latest']").attr("selected", "selected");
@@ -254,6 +262,7 @@
 					if (rt2<rt){
 					    rt=rt2;	
 					}
+					
 					//$('input[name=q]:first').css('width','200%')
 					$( 'input[name=q]:first').animate({
 						width: rt,
