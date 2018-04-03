@@ -42,7 +42,6 @@ if (file_exists($_FILES['fileToUpload']['tmp_name'])) {
         echo "Sorry, your file was not uploaded.";
     // if everything is ok, try to upload file
     } else {
-        echo $_FILES["fileToUpload"]["tmp_name"].'-->'.$target_file;
         try {
             move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
         } catch (Exception $e) {

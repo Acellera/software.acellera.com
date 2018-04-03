@@ -4,12 +4,12 @@
 <button id='showform' type="button" style="margin-left:10px;"> Show the form</button>
 
 <div id='suggestion-wrapper' style=display:none;>
-    <form style="float: left; padding-left: 22px; padding-top: 20px" id="suggestionform" action="https://software.acellera.com/test/send_comment.php" method="post" enctype="multipart/form-data">
+    <form style="float: left; padding-left: 22px; padding-top: 20px" id="suggestionform" action="https://software.acellera.com/test/php/send_comment.php" method="post" enctype="multipart/form-data">
           Your email: <input type="text" name="email" required><br>
-          Your text:<br>
+          Your comments:<br>
 
           <textarea name="comment" rows="5" cols="10" wrap="soft" required>  </textarea>
-          Choose an image: <input type="file" name="fileToUpload" id="fileToUpload">
+          You can upload an image: <input type="file" name="fileToUpload" id="fileToUpload">
           <input type="submit" value="Send">
     </form>
 
