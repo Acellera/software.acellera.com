@@ -137,6 +137,27 @@
 			{% endblock index %}
 		</ul>
 
+	<div id='feedbackbox' style='display:block;clear:both;'>
+
+		<p style="margin-left:10px;margin-top:10px;">Any suggestions or comments?</p>
+		<button id='showform' type="button" style="margin-left:10px;"> Show the form</button>
+
+		<div id='suggestion-wrapper' style=display:none;>
+		    <form style="float: left; padding-left: 22px; padding-top: 20px" id="suggestionform" action="https://software.acellera.com/test/php/send_comment.php" method="post" enctype="multipart/form-data">
+			  Your email: <br><input type="text" name="email" required><br><br>
+			  Your comment:<br>
+
+			  <textarea name="comment" rows="5" cols="10" wrap="soft" required>  </textarea><br><br>
+			  Choose an image: <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
+			  <input type="submit" value="  Send  ">     
+		    </form>
+
+		    
+
+		</div>
+	</div>
+
+
       </div>
       &nbsp;
     </nav>
@@ -240,6 +261,12 @@
 
 	<script type="text/javascript">
         $(document).ready(function(){ 
+
+            $("#showform").click(function(){
+            $("#suggestion-wrapper").toggle();
+            });
+
+
 			$('#mpip').css('display','none');
 			$('#driverupp').css('display','none');
 			$('#htmdupp').css('display','none');

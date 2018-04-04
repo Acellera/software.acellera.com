@@ -11,7 +11,7 @@ mail($to, $subject, $message, $headers);
 $target_dir = "/tmp/";
 
 if (file_exists($_FILES['fileToUpload']['tmp_name'])) {
-    $target_file = $target_dir . basename($_FILES["fileToUpload"]["tmp_name"]);
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["tmp_name"] . '.png');
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($_FILES["fileToUpload"]["name"],PATHINFO_EXTENSION));
     // Check if image file is a actual image or fake image

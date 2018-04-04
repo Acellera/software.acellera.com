@@ -1,0 +1,94 @@
+{% extends 'download_template.html' %}
+{% set title = 'Academic download' %}
+{% set active_page = 'download' %}
+
+{% block index %}
+
+<li class="toctree-l1"><a class="reference internal" href="#install">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#prer">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#pack">How to install conda</a></li>
+
+{% endblock index %}
+
+{% block content %}
+<div style="padding-top:10px; padding-bottom:30px;" id="allbody">
+    <div style="width:90%; margin: auto auto;">
+
+        <h2 id='install'>Installation</h2>
+
+        <table style="border:0;width:100%;">
+            <tr><th style="border:0">You can install ACEMD by downloading the tar.bz2 file:</th><th>Or via conda with the command:</th></tr>
+            <tr><td style="border:0"><a class="button" href="https://anaconda.org/acellera/acemd3/3.0.2/download/linux-64/acemd3-3.0.2-0.tar.bz2">Download</a></td>
+                <td style="border:0;padding-top:40px;"><code  class="style3" style="font-size:100%"> conda install -c acellera acemd3</code ></td></tr>
+        </table>
+
+           <p class="style1">
+                ACEMD may then be run from the command line with the command <code  class="style3">acemd3</code>.<br><br> If you download the tar.bz2 file, after extracting it, remember to add the bin folder inside to your path, with: <code  class="style3"> export PATH="/path/where/extracted/acemd3-3.X.Y-Z/bin":$PATH</code >
+           </p>
+
+
+           <p>You can explore the documentation of ACEMD3 <a href="https://software.acellera.com/docs/latest/acemd3/index.html">here</a>.</p>
+
+<div style="white-space: nowrap;overflow-x: auto;"> <h2 id="prer" style="display: inline-block;">Prerequisites</h2>  <img style="display: inline-block;margin-left:5px;" src="./img/downicon.png" id="driverup" width="30" height="30"></div>
+
+<div id="driverupp">
+
+        <p class="style1">
+			Hardware: ACEMD3 requires a modern NVIDIA GPU: we recommend K80, GTX 1080, GTX 1080 Ti and GeForce GTX Titan X. The latest NVIDIA Driver should be installed, available from <a href='http://www.nvidia.com/Download/index.aspx'> here</a>
+		</p>
+		
+        <p class="style1">
+		Software: ACEMD3 requires a 64bit Linux OS. ACEMD3 is formally qualified with Red Hat EL6, but will work with any Linux distribution supported by NVIDIA CUDA, provided the GLIBC version is 2.12 or higher. Note that RHEL 5 and SLES 10 are not supported.
+		</p>
+
+</div>
+
+
+<div style="white-space: nowrap;overflow-x: auto;"><h2 id="pack" class="style4" style="display: inline-block;">In case you do not have conda</h2><img style="display: inline-block;margin-left:5px;" src="./img/downicon.png" id="mpi" width="30" height="30"></div>
+
+	<div id="mpip">
+
+		    <p class="style1">
+		        If you are not sure, you can check if you have it with this command:</p>
+		    <div class="style2">
+		        <code  class="style3">  conda -V </code >
+		    </div>
+		    <br>
+		    <p class="style1">If the output of this command is not the version of conda, it means that you do not have conda. In order to install it, please download the following package:</p>
+		    <table style="border:1px solid rgb(211,211,211);border-spacing: 0; width:80%; margin: auto auto;">
+		        <tr>
+					    <td style="border-left: 1px solid rgb(211,211,211); padding-top:10px;padding-bottom:10px;width:33%;background-color: #f9f9f9;text-align: center;">
+		                <span style='opacity:0.6' class="fa fa-linux fa-4x"></span>
+		                <p style="color:rgb(102,102,102);text-align:center;">Linux</p></td>
+		        </tr>
+		        <tr>
+		            <td style="border-top:1px solid rgb(211,211,211);text-align:center;padding-top:10px; padding-bottom:10px;">
+		                <p style="text-align:center;"><a class="reference external"
+		                      href="https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh">64-bit (bash
+		                    installer)</a></p>
+
+		            </td>
+		        </tr>
+		    </table>
+
+		    <p class="style2">
+		        Now, to install the conda package manager, go to directory where to you downloaded the previous package and
+		        run: </p>
+		    <div class="style2">
+		        <code  class="style3">  bash Miniconda3-latest-*-x86_64.sh</code >
+		    </div>
+		    <br>
+		    <p class="style1">
+		        And follow the instructions that appear in your terminal. Once you have finished, you should be able to use conda to install ACEMD3:
+			    <div class="style2">
+				    <code  class="style3"> conda install -c acellera acemd3</code > <br>
+		    	    </div>
+		    </p>   
+  
+        </div> 
+
+    </div>
+</div>
+{% endblock %}
+
+
