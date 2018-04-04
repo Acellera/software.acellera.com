@@ -242,6 +242,7 @@
         $(document).ready(function(){ 
 			$('#mpip').css('display','none');
 			$('#driverupp').css('display','none');
+			$('#htmdupp').css('display','none');
 			
 			$("#mpi").click(function(){
 				if ( $("#mpip").css('display') == 'none' ){
@@ -261,6 +262,17 @@
 				}else{
 					$('#driverupp').css('display','none');
 					$("#driverup").attr("src","./img/downicon.png");
+				}
+			});
+
+			$("#htmdup").click(function(){
+				
+				if ( $("#htmdupp").css('display') == 'none' ){
+					$('#htmdupp').css('display','inline-block');
+					$("#htmdup").attr("src","./img/upicon.png");
+				}else{
+					$('#htmdupp').css('display','none');
+					$("#htmdup").attr("src","./img/downicon.png");
 				}
 			});
 			
