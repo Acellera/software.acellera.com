@@ -266,6 +266,19 @@
   
     <script type="text/javascript" src="_static/js/custom.js"></script>
 
+    <script type="text/javascript">
+    var trackOutboundLink = function(url) {
+      gtag('event', 'click', {
+        'event_category': 'outbound',
+        'event_label': url,
+        'transport_type': 'beacon',
+        'event_callback': function(){document.location = url;}
+      });
+    }
+    </script>
+
+
+
 	<script type="text/javascript">
         $(document).ready(function(){ 
 
