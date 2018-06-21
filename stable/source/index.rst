@@ -17,7 +17,7 @@ You can find here a list of all available software:
     AceCloud <acecloud/index>
     Parameterize <parameterize/index>
     AceFlow <aceflow/index>
-    ACEMD3 <acemd3newdoc/index>
+    ACEMD3 <acemd3/index>
 
 Indices and tables
 ==================
