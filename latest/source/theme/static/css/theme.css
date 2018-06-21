@@ -1,6 +1,16 @@
 ﻿/*scroll to top*/
 /*scroll to top*/
 
+
+.highlight-default:not(.code) .highlight pre span{
+    color: #333 !important;
+
+}
+
+.highlight-default:not(.code) .highlight pre span{
+    font-weight: normal !important;
+}
+
 .code.ipython3.highlight-default pre {
     background-color: rgba(208, 212, 215, 0.6);
 }
