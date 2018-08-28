@@ -1,22 +1,6 @@
 {%- if builder != 'singlehtml' %}
 
-<p style="margin-left:10px;margin-top:10px;">Any suggestions or comments?</p>
-<button id='showform' type="button" style="margin-left:10px;"> Show the form</button>
-
-<div id='suggestion-wrapper' style=display:none;>
-
-    <form style="float: left; padding:15px;box-sizing: border-box;width: 100%;overflow-x: hidden;" id="suggestionform" action="https://software.acellera.com/test/php/send_comment.php" method="post" enctype="multipart/form-data">
-          Your email: <br><input type="text" name="email" required><br><br>
-          Your comment:<br>
-
-          <textarea name="comment" rows="5" cols="10" wrap="soft" required>  </textarea><br><br>
-          Choose an image: <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
-          <input type="submit" value="  Send  ">     
-    </form>
-
-    
-
-</div>
+<p style="margin-left:10px;margin-top:10px;">Any suggestions or comments?<p> <a href="/suggestions.html"> Write us!</a>
 
 {%- endif %}
 
