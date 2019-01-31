@@ -1,6 +1,10 @@
 ﻿/*scroll to top*/
 /*scroll to top*/
 
+.downicon {
+    width:5% !important;
+}
+
 .scrollup {
 	width: 40px;
 	height: 40px;
