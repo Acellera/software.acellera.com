@@ -1,6 +1,9 @@
 ﻿/*scroll to top*/
 /*scroll to top*/
 
+.downclass {
+    width:5% !important;
+}
 
 .highlight-default:not(.code) .highlight pre span{
     color: #333 !important;
