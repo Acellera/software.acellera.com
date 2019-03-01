@@ -22,7 +22,7 @@ help:
 clean:
 	rm -rf $(BUILDDIR)/
 	for release in latest stable; do \
-		for software in acecloud aceflow acemd acemd3 acemd3newdoc htmd parameterize; do \
+		for software in aceflow acemd acemd3 acemd3newdoc htmd parameterize; do \
 			find $$release/source/$$software -mindepth 1 ! -name ".gitignore" -delete; \
 		done \
 	done
@@ -50,8 +50,6 @@ rst:
 	#For others
 	scp -r www.acellera.com:~/software.acellera.com/source/parameterize/* latest/source/parameterize
 	scp -r www.acellera.com:~/software.acellera.com/source/parameterize/* stable/source/parameterize
-	scp -r www.acellera.com:~/software.acellera.com/source/acecloud/* latest/source/acecloud
-	scp -r www.acellera.com:~/software.acellera.com/source/acecloud/* stable/source/acecloud
 	scp -r www.acellera.com:~/software.acellera.com/source/aceflow/* latest/source/aceflow
 	scp -r www.acellera.com:~/software.acellera.com/source/aceflow/* stable/source/aceflow
 	scp -r www.acellera.com:~/software.acellera.com/source/acemd/* latest/source/acemd
