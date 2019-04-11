@@ -22,7 +22,7 @@ help:
 clean:
 	rm -rf $(BUILDDIR)/
 	for release in latest stable; do \
-		for software in aceflow acemd acemd3 acemd3newdoc htmd parameterize; do \
+		for software in aceflow acemd acemd3 acemd3newdoc htmd moleculekit parameterize; do \
 			find $$release/source/$$software -mindepth 1 ! -name ".gitignore" -delete; \
 		done \
 	done
@@ -58,6 +58,8 @@ rst:
 	scp -r www.acellera.com:~/software.acellera.com/source/acemd3/* stable/source/acemd3
 	scp -r www.acellera.com:~/software.acellera.com/source/acemd3newdoc/* latest/source/acemd3newdoc
 	scp -r www.acellera.com:~/software.acellera.com/source/acemd3newdoc/* stable/source/acemd3newdoc
+	scp -r www.acellera.com:~/software.acellera.com/source/moleculekit/* latest/source/moleculekit
+	scp -r www.acellera.com:~/software.acellera.com/source/moleculekit/* stable/source/moleculekit
 
 html: static rst
 	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) latest/source $(BUILDDIR)/latest/html

@@ -13,6 +13,7 @@ You can find here a list of all available software:
     :maxdepth: 3
 
     HTMD <htmd/index>
+    Moleculekit	<moleculekit/index>
     ACEMD <acemd/index>
     AceCloud <acecloud/index>
     Parameterize <parameterize/index>
