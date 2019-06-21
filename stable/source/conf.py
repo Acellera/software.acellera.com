@@ -80,6 +80,9 @@ author = 'Stefan Doerr'
 with open('htmd/version', 'r') as f:
     version = f.readline()
     release = version
+
+#version = '1.2.3'#f.readline()
+#release = version
 #version = subprocess.check_output(['python', '../gethtmdtag.py', 'tag']).decode('utf8').strip()
 # The full version, including alpha/beta/rc tags.
 #release = 'X.Y'

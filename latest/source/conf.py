@@ -29,7 +29,7 @@ from datetime import date
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
-
+sys.path.insert(0, '/home/alejandro/moleculekit/')
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -80,6 +80,8 @@ author = 'Stefan Doerr'
 with open('htmd/version', 'r') as f:
     version = f.readline()
     release = version
+#version = '1.2.3'
+#release = version
 #version = subprocess.check_output(['python', '../gethtmdtag.py', 'tag']).decode('utf8').strip()
 # The full version, including alpha/beta/rc tags.
 #release = 'X.Y'

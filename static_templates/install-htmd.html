@@ -1,0 +1,134 @@
+{% extends 'download_template.html' %}
+{% set title = 'Academic download' %}
+{% set active_page = 'download' %}
+
+{% block index %}
+
+<li class="toctree-l1"><a class="reference internal" href="#pack">Getting the package installer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#inst">Install HTMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#start">Start using HTMD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#update">Update HTMD</a></li>
+
+{% endblock index %}
+
+{% block content %}
+<div style="padding-top:10px; padding-bottom:30px;" id="allbody">
+    <div style="width:90%; margin: auto auto;">
+
+        <h1 style="font-size:2.25em;margin-right:0px;margin-bottom:16px;margin-left:0px;line-height:1.2;padding-bottom:0.3em;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(238,238,238);color:rgb(51,51,51);font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;margin-top:20px!important">
+            Getting HTMD</h1>
+
+	<p class="style1"> If you are a non-profit entity, you can download a free version of HTMD which does not have all functionalities of the Pro-version. </p>
+
+    <p class="style1"> The Pro-version requires a license, which is linked to acceptance of the end user License agreement (EULA).</p>
+
+    <p class="style1"> If you do not have a license, please contact us. If you already have a license, please follow the instructions here below.</p>
+
+ 
+	</p>
+
+        <h2 id="inst"class="style4">
+            <div id="installing-htmd"></div>
+            Installing HTMD
+        </h2>
+        <p class="style1">
+            With conda, you can easily <span style="color:orange;">install</span> HTMD by running the following
+            commands:</p>
+
+		<div class="style2">
+		<code  class="style3"> conda <span style="color:orange;">install</span> -c acellera -c psi4 htmd</code > <br> <br>
+        </div>
+
+        <p class="style1">
+            Before using HTMD, please read the <a href="http://software.acellera.com/news/license.pdf">EULA</a> and register using the command</p>
+        <div class="style2">
+            <code  class="style3">  htmd_register</code >
+        </div>
+		<br>
+        <p class="style1">
+            If you don't accept the <a href="http://software.acellera.com/news/license.pdf">EULA</a> and register at this point, HTMD will prompt for registration when the Python
+            module is imported </pre>
+
+
+	<div style="white-space: nowrap;overflow-x: auto;"><h2 id="pack" class="style4" style="display: inline-block;">In case you do not have conda</h2><img class="downicon" style="display: inline-block;margin-left:5px;" src="./img/downicon.png" id="mpi" width="30" height="30"></div>
+
+	<div id="mpip">
+
+		<p class="style1">
+		    First, check if you already have conda:</p>
+		<div class="style2">
+		    <code  class="style3">  conda -V </code >
+		</div>
+		<br>
+		<p class="style1">
+		    If this command reports the conda version, follow to the <a href="#installing-htmd">Installing HTMD</a>
+		    section. If not, download the appropriate following package:</p>
+		<table style="border:1px solid rgb(211,211,211);border-spacing: 0; width:80%; margin: auto auto;">
+		    <tr>
+		        <td style="border-left: 1px solid rgb(211,211,211); padding-top:10px;padding-bottom:10px;width:33%;background-color: #f9f9f9;text-align: center;">
+		            <span style='opacity:0.6' class="fa fa-linux fa-4x"></span>
+		            <p style="color:rgb(102,102,102);text-align:center;">Linux</p></td>
+		    </tr>
+		    <tr>
+
+		        <td style="text-align:center;border-left:1px solid rgb(211,211,211);padding-top:10px; padding-bottom:10px;border-top:1px solid rgb(211,211,211);">
+		            <p style="text-align:center;"><a class="reference external"
+		                  href="https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh">64-bit (bash
+		                installer)</a></p>
+		        </td>
+		    </tr>
+		</table>
+
+		<p class="style2">
+		    Now, to install the conda package manager, go to directory where to you downloaded the previous package and
+		    run: </p>
+		<div class="style2">
+		    <code  class="style3">  bash Miniconda3-latest-*-x86_64.sh</code >
+		</div>
+		<br>
+		<p class="style1">
+		    And follow the instructions.</p>
+
+
+	</div>
+
+	<div style="white-space: nowrap;overflow-x: auto;"> <h2 id="start" style="display: inline-block;">Start using HTMD</h2>  <img class="downicon" style="display: inline-block;margin-left:5px;" src="./img/downicon.png" id="driverup" width="30" height="30"></div>
+
+	<div id="driverupp">
+		<p class="style1">
+		    Start using HTMD by either starting an interactive Python shell:</p>
+		<div class="style2">
+		    <code  class="style3">  ipython</code >
+		</div>
+		<br>
+		<p class="style1">
+		    Or by opening an ipython notebook:</p>
+		<div class="style2">
+		    <code  class="style3">  jupyter-notebook</code >
+		</div>
+		<br>
+		<p class="style1">
+		    On either case, import the module and start using HTMD:</p>
+
+		<div class="style2">
+		    <code  class="style3">  from htmd.ui import *</code >
+		</div>
+		<br>
+	</div>
+
+
+	<div style="white-space: nowrap;overflow-x: auto;"> <h2 id="update" style="display: inline-block;">Updating HTMD</h2>  <img class="downicon" style="display: inline-block;margin-left:5px;" src="./img/downicon.png" id="htmdup" width="30" height="30"></div>
+
+	<div id="htmdupp">
+
+		<p class="style1">
+		    If you want to update HTMD to the latest version, run:</p>
+		<div class="style2">
+		    <code  class="style3">  conda update -c acellera -c psi4 htmd</code >
+		</div>
+	</div>
+        
+    </div>
+</div>
+{% endblock %}
+

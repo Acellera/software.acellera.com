@@ -61,7 +61,7 @@ rst:
 	scp -r www.acellera.com:~/software.acellera.com/source/moleculekit/* latest/source/moleculekit
 	scp -r www.acellera.com:~/software.acellera.com/source/moleculekit/* stable/source/moleculekit
 
-html: static rst
+html: static rst  
 	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) latest/source $(BUILDDIR)/latest/html
 	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) stable/source $(BUILDDIR)/stable/html
 	@echo
