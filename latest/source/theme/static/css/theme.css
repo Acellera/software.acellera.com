@@ -2932,7 +2932,7 @@ div[class^='highlight'] pre {
 .wy-menu-vertical{
 
 	/*background-color:rgba(0,0,0,0.1);*/
-	background-color:#D7D7D7; /*#2eb8b8background color , different from ul inside wy-menu-vertical*/
+	background-color:#fff; /*#2eb8b8background color , different from ul inside wy-menu-vertical*/
 
 }
 
@@ -3267,7 +3267,7 @@ footer p {
 }
 .wy-nav-content {
     margin: 0;
-    background: #fcfcfc;
+    background: #efeeff;
 /*
     overflow-y:auto;
 */
@@ -3780,7 +3780,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 	-webkit-transition: all 0.5s ease-in;
     	-moz-transition: all 0.5s ease-in;
     	transition: all 0.5s ease-in;
-	background-color: #D7D7D7;/* menu color*/
+	background-color: #FFF;/* menu color*/
 
 }
 
@@ -3909,7 +3909,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
 	.main-header{
 		display:block;
-		background-color: #105C7B; /*suspect*/
+		background-color: rgba(19,5,135,1); /*suspect*/
 		border-bottom: 0px solid #0F244A;
 		height:90px;
 		
@@ -3960,7 +3960,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 	}
 
 	.wy-nav-side {
-		background-color: #D7D7D7; 
+		background-color: #FFF; 
 
 	}
 
