@@ -32,7 +32,7 @@ for line in fh:
 
 cardname_mapping = {' `NVIDIA GeForce GTX 1080`_    ':'GTX 1080',
                     ' `NVIDIA GeForce GTX 1080 Ti`_ ':'GTX 1080 Ti',
-                    ' `NVIDIA Tesla V100`_          ':'Titan V',
+                    ' `NVIDIA Tesla V100`_          ':'Tesla V100',
                     ' `NVIDIA GeForce RTX 2080 Ti`_ ':'RTX 2080 Ti'}
 
 for i in [1,2,3]: #1:DHFR,2:FactorIX,3:STMV 
