@@ -21,7 +21,7 @@ help:
 
 clean:
 	rm -rf $(BUILDDIR)/
-	for release in latest stable; do \
+	for release in latest; do \
 		for software in aceflow acemd acemd3 acemd3newdoc htmd moleculekit parameterize; do \
 			find $$release/source/$$software -mindepth 1 ! -name ".gitignore" -delete; \
 		done \
@@ -29,14 +29,12 @@ clean:
 
 publish:
 	scp -r $(BUILDDIR)/latest/html/* software.acellera.com:/var/www/software/docs/latest
-	scp -r $(BUILDDIR)/stable/html/* software.acellera.com:/var/www/software/docs/stable
 	scp -r $(BUILDDIR)/static/*  software.acellera.com:/var/www/software/
 	#ssh software.acellera.com 'chgrp -R www-htmd /var/www/software/; chmod -R g+rwX /var/www/software/'
 
 publish-test:
 	ssh software.acellera.com 'mkdir -p /var/www/software/test'
 	scp -r $(BUILDDIR)/latest/html/* software.acellera.com:/var/www/software/test/docs/latest
-	scp -r $(BUILDDIR)/stable/html/* software.acellera.com:/var/www/software/test/docs/stable
 	scp -r $(BUILDDIR)/static/*  software.acellera.com:/var/www/software/test/
 	#ssh software.acellera.com 'chmod -R g+rwX /var/www/software/test'
 
@@ -46,23 +44,13 @@ static:
 
 rst:
 	scp -r software.acellera.com:/var/www/software/source/htmd/latest/* latest/source/htmd
-	scp -r software.acellera.com:/var/www/software/source/htmd/stable/* stable/source/htmd
-	#For others
 	scp -r software.acellera.com:/var/www/software/source/parameterize/* latest/source/parameterize
-	scp -r software.acellera.com:/var/www/software/source/parameterize/* stable/source/parameterize
 	scp -r software.acellera.com:/var/www/software/source/aceflow/* latest/source/aceflow
-	scp -r software.acellera.com:/var/www/software/source/aceflow/* stable/source/aceflow
 	scp -r software.acellera.com:/var/www/software/source/acemd/* latest/source/acemd
-	scp -r software.acellera.com:/var/www/software/source/acemd/* stable/source/acemd
 	scp -r software.acellera.com:/var/www/software/source/acemd3/* latest/source/acemd3
-	scp -r software.acellera.com:/var/www/software/source/acemd3/* stable/source/acemd3
-	scp -r software.acellera.com:/var/www/software/source/acemd3newdoc/* latest/source/acemd3newdoc
-	scp -r software.acellera.com:/var/www/software/source/acemd3newdoc/* stable/source/acemd3newdoc
 	scp -r software.acellera.com:/var/www/software/source/moleculekit/* latest/source/moleculekit
-	scp -r software.acellera.com:/var/www/software/source/moleculekit/* stable/source/moleculekit
 
 html: static rst   
 	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) latest/source $(BUILDDIR)/latest/html
-	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) stable/source $(BUILDDIR)/stable/html
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/latest/html and $(BUILDDIR)/stable/html"
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/latest/html"
