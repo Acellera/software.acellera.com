@@ -28,27 +28,27 @@ clean:
 	done
 
 publish:
-	scp -r $(BUILDDIR)/latest/html/* software.acellera.com:/var/www/software/docs/latest
-	scp -r $(BUILDDIR)/static/*  software.acellera.com:/var/www/software/
-	#ssh software.acellera.com 'chgrp -R www-htmd /var/www/software/; chmod -R g+rwX /var/www/software/'
+	scp -r $(BUILDDIR)/latest/html/* software.acellera.com:/var/www/software.acellera.com/docs/latest
+	scp -r $(BUILDDIR)/static/*  software.acellera.com:/var/www/software.acellera.com/
+	#ssh software.acellera.com 'chgrp -R www-htmd /var/www/software.acellera.com/; chmod -R g+rwX /var/www/software.acellera.com/'
 
 publish-test:
-	ssh software.acellera.com 'mkdir -p /var/www/software/test'
-	scp -r $(BUILDDIR)/latest/html/* software.acellera.com:/var/www/software/test/docs/latest
-	scp -r $(BUILDDIR)/static/*  software.acellera.com:/var/www/software/test/
-	#ssh software.acellera.com 'chmod -R g+rwX /var/www/software/test'
+	ssh software.acellera.com 'mkdir -p /var/www/software.acellera.com/test'
+	scp -r $(BUILDDIR)/latest/html/* software.acellera.com:/var/www/software.acellera.com/test/docs/latest
+	scp -r $(BUILDDIR)/static/*  software.acellera.com:/var/www/software.acellera.com/test/
+	#ssh software.acellera.com 'chmod -R g+rwX /var/www/software.acellera.com/test'
 
 static:
 	python render_jinja.py ./static_templates/ $(BUILDDIR)/static/
 	cp -R ./static_files/* $(BUILDDIR)/static/
 
 rst:
-	scp -r software.acellera.com:/var/www/software/source/htmd/latest/* latest/source/htmd
-	scp -r software.acellera.com:/var/www/software/source/parameterize/* latest/source/parameterize
-	scp -r software.acellera.com:/var/www/software/source/aceflow/* latest/source/aceflow
-	scp -r software.acellera.com:/var/www/software/source/acemd/* latest/source/acemd
-	scp -r software.acellera.com:/var/www/software/source/acemd3/* latest/source/acemd3
-	scp -r software.acellera.com:/var/www/software/source/moleculekit/* latest/source/moleculekit
+	scp -r software.acellera.com:/var/www/software.acellera.com/source/htmd/latest/* latest/source/htmd
+	scp -r software.acellera.com:/var/www/software.acellera.com/source/parameterize/* latest/source/parameterize
+	scp -r software.acellera.com:/var/www/software.acellera.com/source/aceflow/* latest/source/aceflow
+	scp -r software.acellera.com:/var/www/software.acellera.com/source/acemd/* latest/source/acemd
+	scp -r software.acellera.com:/var/www/software.acellera.com/source/acemd3/* latest/source/acemd3
+	scp -r software.acellera.com:/var/www/software.acellera.com/source/moleculekit/* latest/source/moleculekit
 
 html: static rst   
 	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) latest/source $(BUILDDIR)/latest/html
