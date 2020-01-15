@@ -22,7 +22,7 @@ help:
 clean:
 	rm -rf $(BUILDDIR)/
 	for release in latest; do \
-		for software in aceflow acemd acemd3 acemd3newdoc htmd moleculekit parameterize; do \
+		for software in acemd acemd3 htmd moleculekit parameterize; do \
 			find $$release/source/$$software -mindepth 1 ! -name ".gitignore" -delete; \
 		done \
 	done
@@ -45,7 +45,6 @@ static:
 rst:
 	scp -r software.acellera.com:/var/www/software.acellera.com/source/htmd/latest/* latest/source/htmd
 	scp -r software.acellera.com:/var/www/software.acellera.com/source/parameterize/* latest/source/parameterize
-	scp -r software.acellera.com:/var/www/software.acellera.com/source/aceflow/* latest/source/aceflow
 	scp -r software.acellera.com:/var/www/software.acellera.com/source/acemd/* latest/source/acemd
 	scp -r software.acellera.com:/var/www/software.acellera.com/source/acemd3/* latest/source/acemd3
 	scp -r software.acellera.com:/var/www/software.acellera.com/source/moleculekit/* latest/source/moleculekit
