@@ -16,7 +16,7 @@ You can find here a list of all available software:
 
     HTMD <htmd/index>
     Moleculekit <moleculekit/index>
-    ACEMD <acemd/index>
+    ACEMD (deprecated) <acemd/index>
     Parameterize <parameterize/index>
     ACEMD3 <acemd3/index>
 
