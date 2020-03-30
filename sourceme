@@ -1,1 +1,4 @@
+source deactivate
+export PATH="/home/alejandro/docs_conda/bin":$PATH
+conda activate docs
 source /home/alejandro/docs_sources/sourceme
