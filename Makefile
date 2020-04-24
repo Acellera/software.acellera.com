@@ -55,3 +55,25 @@ html: static rst
 	cp my_searchtools.js build/latest/html/_static/searchtools.js
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/latest/html"
+
+rstlocal:
+	cd repos/htmd/doc/; make rst
+	cd repos/parameterize/doc/; make rst
+	cd repos/acemd/doc/; make rst
+	cd repos/acemd3/doc/; make rst
+	cd repos/moleculekit/doc/; make rst
+	cd repos/playmolecule-python-api/doc/; make rst
+	cp -r repos/htmd/doc/source/* latest/source/htmd
+	cp -r repos/parameterize/doc/source/* latest/source/parameterize
+	cp -r repos/acemd/doc/source/* latest/source/acemd
+	cp -r repos/acemd3/doc/source/* latest/source/acemd3
+	cp -r repos/moleculekit/doc/source/* latest/source/moleculekit
+	cp -r repos/playmolecule-python-api/doc/source/* latest/source/playmolecule-python-api
+
+htmllocal: static rstlocal    
+	$(SPHINXBUILD) -a -E -b html $(ALLSPHINXOPTS) latest/source $(BUILDDIR)/latest/html
+	cp my_searchtools.js build/latest/html/_static/searchtools.js
+	@echo
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/latest/html"
+
+
