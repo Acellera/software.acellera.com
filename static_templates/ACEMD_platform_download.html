@@ -1,0 +1,38 @@
+{% extends 'home_download_template.html' %}
+{% block content %}
+	<center>
+	<h3>Download ACEMD platform</h3>
+	
+<div style="overflow-x:auto;">
+
+    <img src="https://www.acellera.com/wp-content/uploads/2019/07/ACEMD_definition.png?x99744" alt="ACEMD platform logo" width="1396" height="678">
+
+    <br><br><br><br>
+    <p style="font-size:18px;">ACEMD platform includes: HTMD, Moleculekit, Parameterize and ACEMD. You can download and use this platform for free, but it comes with a limit of 1 GPU.</p>
+    <p style="font-size:18px;">If you want to use more GPUs, please <a href="https://www.acellera.com/contact">contact us</a> to get a quote for a license. We are flexible!</p>
+    <p style="font-size:18px;">One more thing before installing, <b>please read the EULA</b> (End User License Agreement) for  <a href="https://software.acellera.com/news/eula_fp.pdf">ACEMD platform</a>.</p>
+
+    <p style="font-size:18px;">Let's install it:</p> 
+
+    <div class="highlight-python notranslate">
+        <div class="highlight">
+            <pre style="text-align:left;">
+            #create a clean conda environment, with python 3.6
+            conda create -n acellera_tools python=3.6 
+
+            #activate the environment
+            conda activate acellera_tools
+
+            #HTMD, Moleculekit, Parameterize and ACEMD will be installed inside acellera_tools environment
+            conda install -c acellera -c psi4 -c conda-forge acemd-platform
+            </pre>
+        </div>
+    </div>
+
+    <p style="font-size:18px;">Thanks for using our software! If you encouter problems, find a bug, or need assitance with some functionalities, you can request help <a href="https://software.acellera.com/help.html">here</a>. </p>
+
+</div>
+</center>
+{% endblock %}
+
+
